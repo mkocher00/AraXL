@@ -73,8 +73,11 @@ sources:
     # Level 7
     - hardware/src/ara_cluster.sv
     - hardware/src/axi_inval_filter.sv
+    - hardware/src/ara_vector_unit.sv
+    - hardware/src/ara_multithreading_system.sv
     # Level 8
     - hardware/src/ara_system.sv
+    - hardware/src/host_system.sv
     - hardware/src/l2_mem_interconnect.sv
     # Level 9
     - hardware/src/ara_soc.sv

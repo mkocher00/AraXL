@@ -1,0 +1,20 @@
+wc: /scratch/msc26h14/AraXL/apps/ideal_dispatcher/vtrace/fmatmul.vtrace: No such file or directory
+cd build && \
+questa-2021.3 vsim -c  +UVM_NO_RELNOTES +PRELOAD="/scratch/msc26h14/AraXL/apps/bin/fmatmul.ideal" -sv_lib work-dpi/ara_dpi -work work -voptargs=+acc -suppress vsim-3009 -suppress vopt-7033 work.ara_tb -do "run -a"
+Reading pref.tcl
+
+# 2021.3_2
+
+# vsim -c "+UVM_NO_RELNOTES" "+PRELOAD=/scratch/msc26h14/AraXL/apps/bin/fmatmul.ideal" -sv_lib work-dpi/ara_dpi -work work -voptargs="+acc" -suppress vsim-3009 -suppress vopt-7033 work.ara_tb -do "run -a" 
+# Start time: 17:30:21 on Oct 12,2026
+# Loading /tmp/msc26h14@badile107.ee.ethz.ch_dpi_97803/linux_x86_64_gcc-7.4.0/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /scratch/msc26h14/AraXL/hardware/src/ara_system.sv(124): Module 'accel_dispatcher_ideal' is not defined.
+#  For instance 'i_accel_dispatcher_ideal' at path 'ara_tb.dut.i_ara_soc.i_system'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+Error loading design
+# End time: 17:30:22 on Oct 12,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+make: *** [Makefile:195: simc] Error 12

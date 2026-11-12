@@ -1,0 +1,5 @@
+cd fmatmul && if [ -d script ]; then python3 script/gen_data.py 16 64 64 > data.S ; else touch data.S; fi
+sed -i s/"li t0, MSTATUS_FS | MSTATUS_XS$"/"li t0, MSTATUS_FS | MSTATUS_XS | MSTATUS_VS"/ /scratch/msc26h14/AraXL/apps/riscv-tests/benchmarks/common/crt.S
+git update-index --assume-unchanged /scratch/msc26h14/AraXL/apps/riscv-tests/benchmarks/common/crt.S
+fatal: Unable to mark file apps/riscv-tests/benchmarks/common/crt.S
+make: *** [Makefile:74: patch-spike-crt0] Error 128

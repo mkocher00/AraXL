@@ -1,0 +1,1181 @@
+# //  Questa Sim-64
+# //  Version 10.7b_1 linux_x86_64 Jul 26 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do build/compile_default.tcl
+# /scratch/msc26h14/AraXL
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:29 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/clk_rst_gen.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/sim_timeout.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/stream_watchdog.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/signal_highlighter.sv 
+# -- Skipping module clk_rst_gen
+# -- Skipping module sim_timeout
+# -- Skipping module stream_watchdog
+# -- Skipping module signal_highlighter
+# 
+# Top level modules:
+# 	clk_rst_gen
+# 	sim_timeout
+# 	stream_watchdog
+# 	signal_highlighter
+# End time: 17:22:29 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:30 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_id_queue.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_stream_mst.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_synch_holdable_driver.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_verif_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_synch_driver.sv /scratch/msc26h14/AraXL/hardware/deps/common_verification/src/rand_stream_slv.sv 
+# -- Skipping package rand_id_queue_pkg
+# -- Skipping module rand_stream_mst
+# -- Skipping module rand_synch_holdable_driver
+# -- Skipping package rand_verif_pkg
+# -- Skipping module rand_synch_driver
+# -- Skipping module rand_stream_slv
+# 
+# Top level modules:
+# 	rand_stream_mst
+# 	rand_stream_slv
+# End time: 17:22:30 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:30 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/rtl/tc_sram.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/rtl/tc_sram_impl.sv 
+# -- Skipping module tc_sram
+# -- Skipping module tc_sram_impl
+# 
+# Top level modules:
+# 	tc_sram_impl
+# End time: 17:22:30 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:30 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/rtl/tc_clk.sv 
+# -- Skipping module tc_clk_and2
+# -- Skipping module tc_clk_buffer
+# -- Skipping module tc_clk_gating
+# -- Skipping module tc_clk_inverter
+# -- Skipping module tc_clk_mux2
+# -- Skipping module tc_clk_xor2
+# -- Skipping module tc_clk_or2
+# -- Skipping module tc_clk_delay
+# 
+# Top level modules:
+# 	tc_clk_and2
+# 	tc_clk_buffer
+# 	tc_clk_gating
+# 	tc_clk_inverter
+# 	tc_clk_mux2
+# 	tc_clk_xor2
+# 	tc_clk_or2
+# 	tc_clk_delay
+# End time: 17:22:30 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:30 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/cluster_pwr_cells.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/generic_memory.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/generic_rom.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/pad_functional.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/pulp_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/pulp_pwr_cells.sv 
+# -- Skipping module cluster_level_shifter_in
+# -- Skipping module cluster_level_shifter_in_clamp
+# -- Skipping module cluster_level_shifter_inout
+# -- Skipping module cluster_level_shifter_out
+# -- Skipping module cluster_level_shifter_out_clamp
+# -- Skipping module generic_memory
+# -- Skipping module generic_rom
+# -- Skipping module pad_functional_pd
+# -- Skipping module pad_functional_pu
+# -- Skipping module pulp_buffer
+# -- Skipping module pulp_level_shifter_in
+# -- Skipping module pulp_level_shifter_in_clamp
+# -- Skipping module pulp_level_shifter_inout
+# -- Skipping module pulp_level_shifter_out
+# -- Skipping module pulp_level_shifter_out_clamp
+# -- Skipping module pulp_power_gating
+# -- Skipping module pulp_isolation_0
+# -- Skipping module pulp_isolation_1
+# 
+# Top level modules:
+# 	cluster_level_shifter_in
+# 	cluster_level_shifter_in_clamp
+# 	cluster_level_shifter_inout
+# 	cluster_level_shifter_out
+# 	cluster_level_shifter_out_clamp
+# 	generic_memory
+# 	generic_rom
+# 	pad_functional_pd
+# 	pad_functional_pu
+# 	pulp_buffer
+# 	pulp_level_shifter_in
+# 	pulp_level_shifter_in_clamp
+# 	pulp_level_shifter_inout
+# 	pulp_level_shifter_out
+# 	pulp_level_shifter_out_clamp
+# 	pulp_power_gating
+# 	pulp_isolation_0
+# 	pulp_isolation_1
+# End time: 17:22:30 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:31 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/tc_pwr.sv 
+# -- Skipping module tc_pwr_level_shifter_in
+# -- Skipping module tc_pwr_level_shifter_in_clamp_lo
+# -- Skipping module tc_pwr_level_shifter_in_clamp_hi
+# -- Skipping module tc_pwr_level_shifter_out
+# -- Skipping module tc_pwr_level_shifter_out_clamp_lo
+# -- Skipping module tc_pwr_level_shifter_out_clamp_hi
+# -- Skipping module tc_pwr_power_gating
+# -- Skipping module tc_pwr_isolation_lo
+# -- Skipping module tc_pwr_isolation_hi
+# 
+# Top level modules:
+# 	tc_pwr_level_shifter_in
+# 	tc_pwr_level_shifter_in_clamp_lo
+# 	tc_pwr_level_shifter_in_clamp_hi
+# 	tc_pwr_level_shifter_out
+# 	tc_pwr_level_shifter_out_clamp_lo
+# 	tc_pwr_level_shifter_out_clamp_hi
+# 	tc_pwr_power_gating
+# 	tc_pwr_isolation_lo
+# 	tc_pwr_isolation_hi
+# End time: 17:22:31 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:31 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/pulp_clock_gating_async.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/cluster_clk_cells.sv /scratch/msc26h14/AraXL/hardware/deps/tech_cells_generic/src/deprecated/pulp_clk_cells.sv 
+# -- Skipping module pulp_clock_gating_async
+# -- Skipping module cluster_clock_and2
+# -- Skipping module cluster_clock_buffer
+# -- Skipping module cluster_clock_gating
+# -- Skipping module cluster_clock_inverter
+# -- Skipping module cluster_clock_mux2
+# -- Skipping module cluster_clock_xor2
+# -- Skipping module pulp_clock_and2
+# -- Skipping module pulp_clock_buffer
+# -- Skipping module pulp_clock_gating
+# -- Skipping module pulp_clock_inverter
+# -- Skipping module pulp_clock_mux2
+# -- Skipping module pulp_clock_xor2
+# -- Skipping module pulp_clock_delay
+# 
+# Top level modules:
+# 	pulp_clock_gating_async
+# 	cluster_clock_and2
+# 	cluster_clock_buffer
+# 	cluster_clock_gating
+# 	cluster_clock_inverter
+# 	cluster_clock_mux2
+# 	cluster_clock_xor2
+# 	pulp_clock_and2
+# 	pulp_clock_buffer
+# 	pulp_clock_inverter
+# 	pulp_clock_mux2
+# 	pulp_clock_xor2
+# 	pulp_clock_delay
+# End time: 17:22:31 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:32 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/binary_to_gray.sv 
+# -- Skipping module binary_to_gray
+# 
+# Top level modules:
+# 	binary_to_gray
+# End time: 17:22:32 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:32 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cb_filter_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cc_onehot.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_reset_ctrlr_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cf_math_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/clk_int_div.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/credit_counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/delta_counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/ecc_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/edge_propagator_tx.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/exp_backoff.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/fifo_v3.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/gray_to_binary.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/heaviside.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/isochronous_4phase_handshake.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/isochronous_spill_register.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/lfsr.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/lfsr_16bit.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/lfsr_8bit.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/lossy_valid_to_stream.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/mv_filter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/onehot_to_bin.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/plru_tree.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/passthrough_stream_fifo.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/popcount.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/ring_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/rr_arb_tree.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/rstgen_bypass.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/serial_deglitch.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/shift_reg.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/shift_reg_gated.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/spill_register_flushable.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_demux.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_filter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_fork.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_intf.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_join_dynamic.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_mux.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_throttle.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/sub_per_hash.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/sync.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/sync_wedge.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/unread.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/read.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/addr_decode_dync.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/boxcar.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_2phase.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_4phase.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/clk_int_div_static.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/trip_counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/addr_decode.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/addr_decode_napot.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/multiaddr_decode.sv 
+# -- Skipping package cb_filter_pkg
+# -- Skipping module cc_onehot
+# -- Skipping package cdc_reset_ctrlr_pkg
+# -- Skipping package cf_math_pkg
+# -- Skipping module clk_int_div
+# -- Skipping module credit_counter
+# -- Skipping module delta_counter
+# -- Skipping package ecc_pkg
+# -- Skipping module edge_propagator_tx
+# -- Skipping module exp_backoff
+# -- Skipping module fifo_v3
+# -- Skipping module gray_to_binary
+# -- Skipping module heaviside
+# -- Skipping module isochronous_4phase_handshake
+# -- Skipping module isochronous_spill_register
+# -- Skipping module lfsr
+# -- Skipping module lfsr_16bit
+# -- Skipping module lfsr_8bit
+# -- Skipping module lossy_valid_to_stream
+# -- Skipping module mv_filter
+# -- Skipping module onehot_to_bin
+# -- Skipping module plru_tree
+# -- Skipping module passthrough_stream_fifo
+# -- Skipping module popcount
+# -- Skipping module ring_buffer
+# -- Skipping module rr_arb_tree
+# -- Skipping module rstgen_bypass
+# -- Skipping module serial_deglitch
+# -- Skipping module shift_reg
+# -- Skipping module shift_reg_gated
+# -- Skipping module spill_register_flushable
+# -- Skipping module stream_demux
+# -- Skipping module stream_filter
+# -- Skipping module stream_fork
+# -- Skipping interface STREAM_DV
+# -- Skipping module stream_join_dynamic
+# -- Skipping module stream_mux
+# -- Skipping module stream_throttle
+# -- Skipping module sub_per_hash
+# -- Skipping module sync
+# -- Skipping module sync_wedge
+# -- Skipping module unread
+# -- Skipping module read
+# -- Skipping module addr_decode_dync
+# -- Skipping module boxcar
+# -- Skipping module cdc_2phase
+# -- Skipping module cdc_2phase_src
+# -- Skipping module cdc_2phase_dst
+# -- Skipping module cdc_4phase
+# -- Skipping module cdc_4phase_src
+# -- Skipping module cdc_4phase_dst
+# -- Skipping module clk_int_div_static
+# -- Skipping module trip_counter
+# -- Skipping module addr_decode
+# -- Skipping module addr_decode_napot
+# -- Skipping module multiaddr_decode
+# 
+# Top level modules:
+# 	cc_onehot
+# 	credit_counter
+# 	edge_propagator_tx
+# 	exp_backoff
+# 	fifo_v3
+# 	gray_to_binary
+# 	isochronous_4phase_handshake
+# 	isochronous_spill_register
+# 	lfsr
+# 	lfsr_16bit
+# 	lfsr_8bit
+# 	lossy_valid_to_stream
+# 	mv_filter
+# 	onehot_to_bin
+# 	plru_tree
+# 	passthrough_stream_fifo
+# 	popcount
+# 	ring_buffer
+# 	rr_arb_tree
+# 	rstgen_bypass
+# 	serial_deglitch
+# 	shift_reg
+# 	spill_register_flushable
+# 	stream_demux
+# 	stream_filter
+# 	stream_fork
+# 	stream_join_dynamic
+# 	stream_mux
+# 	stream_throttle
+# 	sub_per_hash
+# 	sync_wedge
+# 	unread
+# 	read
+# 	boxcar
+# 	cdc_2phase
+# 	cdc_4phase
+# 	clk_int_div_static
+# 	trip_counter
+# 	addr_decode
+# 	addr_decode_napot
+# 	multiaddr_decode
+# End time: 17:22:32 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:34 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cb_filter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_fifo_2phase.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/clk_mux_glitch_free.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/ecc_decode.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/ecc_encode.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/edge_detect.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/lzc.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/max_counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/rstgen.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/spill_register.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_delay.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_fifo.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_fork_dynamic.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_join.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_reset_ctrlr.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_fifo_gray.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/fall_through_register.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/id_queue.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_to_mem.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_arbiter_flushable.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_fifo_optimal_wrap.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_register.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_xbar.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_fifo_gray_clearable.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/cdc_2phase_clearable.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/mem_to_banks_detailed.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_arbiter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/stream_omega_net.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/mem_to_banks.sv 
+# -- Skipping module cb_filter
+# -- Skipping module hash_block
+# -- Skipping module cdc_fifo_2phase
+# -- Skipping module clk_mux_glitch_free
+# -- Skipping module clk_or_tree
+# -- Skipping module counter
+# -- Skipping module ecc_decode
+# -- Skipping module ecc_encode
+# -- Skipping module edge_detect
+# -- Skipping module lzc
+# -- Skipping module max_counter
+# -- Skipping module rstgen
+# -- Skipping module spill_register
+# -- Skipping module stream_delay
+# -- Skipping module stream_fifo
+# -- Skipping module stream_fork_dynamic
+# -- Skipping module stream_join
+# -- Skipping module cdc_reset_ctrlr
+# -- Skipping module cdc_reset_ctrlr_half
+# -- Skipping module cdc_fifo_gray
+# -- Skipping module cdc_fifo_gray_src
+# -- Skipping module cdc_fifo_gray_dst
+# -- Skipping module fall_through_register
+# -- Skipping module id_queue
+# -- Skipping module stream_to_mem
+# -- Skipping module stream_arbiter_flushable
+# -- Skipping module stream_fifo_optimal_wrap
+# -- Skipping module stream_register
+# -- Skipping module stream_xbar
+# -- Skipping module cdc_fifo_gray_clearable
+# -- Skipping module cdc_fifo_gray_src_clearable
+# -- Skipping module cdc_fifo_gray_dst_clearable
+# -- Skipping module cdc_2phase_clearable
+# -- Skipping module cdc_2phase_src_clearable
+# -- Skipping module cdc_2phase_dst_clearable
+# -- Skipping module mem_to_banks_detailed
+# -- Skipping module stream_arbiter
+# -- Skipping module stream_omega_net
+# -- Skipping module mem_to_banks
+# 
+# Top level modules:
+# 	cb_filter
+# 	cdc_fifo_2phase
+# 	clk_mux_glitch_free
+# 	ecc_decode
+# 	ecc_encode
+# 	edge_detect
+# 	max_counter
+# 	stream_delay
+# 	stream_fork_dynamic
+# 	stream_join
+# 	cdc_fifo_gray
+# 	fall_through_register
+# 	id_queue
+# 	stream_to_mem
+# 	stream_fifo_optimal_wrap
+# 	stream_register
+# 	cdc_fifo_gray_clearable
+# 	cdc_2phase_clearable
+# 	stream_arbiter
+# 	stream_omega_net
+# 	mem_to_banks
+# End time: 17:22:34 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:35 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/sram.sv 
+# -- Compiling module sram
+# 
+# Top level modules:
+# 	sram
+# End time: 17:22:35 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:35 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/clock_divider_counter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/clk_div.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/find_first_one.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/generic_LFSR_8bit.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/generic_fifo.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/prioarbiter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/pulp_sync.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/pulp_sync_wedge.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/rrarbiter.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/clock_divider.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/fifo_v2.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/deprecated/fifo_v1.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/edge_propagator_ack.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/edge_propagator.sv /scratch/msc26h14/AraXL/hardware/deps/common_cells/src/edge_propagator_rx.sv 
+# -- Skipping module clock_divider_counter
+# -- Skipping module clk_div
+# -- Skipping module find_first_one
+# -- Skipping module generic_LFSR_8bit
+# -- Skipping module generic_fifo
+# -- Skipping module prioarbiter
+# -- Skipping module pulp_sync
+# -- Skipping module pulp_sync_wedge
+# -- Skipping module rrarbiter
+# -- Skipping module clock_divider
+# -- Skipping module fifo_v2
+# -- Skipping module fifo
+# -- Skipping module edge_propagator_ack
+# -- Skipping module edge_propagator
+# -- Skipping module edge_propagator_rx
+# 
+# Top level modules:
+# 	clk_div
+# 	find_first_one
+# 	generic_LFSR_8bit
+# 	generic_fifo
+# 	prioarbiter
+# 	rrarbiter
+# 	clock_divider
+# 	fifo
+# 	edge_propagator
+# 	edge_propagator_rx
+# End time: 17:22:35 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:35 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/defs_div_sqrt_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/iteration_div_sqrt_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/control_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/nrbd_nrsc_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/div_sqrt_top_mvp.sv /scratch/msc26h14/AraXL/hardware/deps/fpu_div_sqrt_mvp/hdl/div_sqrt_mvp_wrapper.sv 
+# -- Skipping package defs_div_sqrt_mvp
+# -- Skipping module iteration_div_sqrt_mvp
+# -- Skipping module control_mvp
+# -- Skipping package control_mvp_sv_unit
+# -- Skipping module norm_div_sqrt_mvp
+# -- Skipping package norm_div_sqrt_mvp_sv_unit
+# -- Skipping module preprocess_mvp
+# -- Skipping package preprocess_mvp_sv_unit
+# -- Skipping module nrbd_nrsc_mvp
+# -- Skipping package nrbd_nrsc_mvp_sv_unit
+# -- Skipping module div_sqrt_top_mvp
+# -- Skipping package div_sqrt_top_mvp_sv_unit
+# -- Skipping module div_sqrt_mvp_wrapper
+# -- Skipping package div_sqrt_mvp_wrapper_sv_unit
+# 
+# Top level modules:
+# 	div_sqrt_mvp_wrapper
+# End time: 17:22:35 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:36 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_intf.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_atop_filter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_burst_splitter_gran.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_burst_unwrap.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_bus_compare.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_cdc_dst.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_cdc_src.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_cut.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_delayer.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_demux_simple.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_dw_downsizer.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_dw_upsizer.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_fifo.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_fifo_delay_dyn.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_id_remap.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_id_prepend.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_inval_filter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_isolate.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_join.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_demux.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_dw_converter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_from_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_join.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_lfsr.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_mailbox.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_mux.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_regs.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_to_apb.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_to_axi.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_modify_address.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_mux.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_rw_join.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_rw_split.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_serializer.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_slave_compare.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_throttle.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_detailed_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_burst_splitter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_cdc.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_demux.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_err_slv.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_dw_converter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_from_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_id_serialize.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lfsr.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_multicut.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_axi_lite.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_zero_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_interleaved_xbar.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_iw_converter.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_xbar.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar_unmuxed.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_mem_banked.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_mem_interleaved.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_to_mem_split.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xp.sv 
+# -- Skipping package axi_pkg
+# -- Skipping interface AXI_BUS
+# -- Skipping interface AXI_BUS_DV
+# -- Skipping interface AXI_BUS_ASYNC
+# -- Skipping interface AXI_BUS_ASYNC_GRAY
+# -- Skipping interface AXI_LITE
+# -- Skipping interface AXI_LITE_DV
+# -- Skipping interface AXI_LITE_ASYNC_GRAY
+# -- Skipping module axi_atop_filter
+# -- Skipping module axi_atop_filter_intf
+# -- Skipping module axi_burst_splitter_gran
+# -- Skipping module axi_burst_splitter_gran_ax_chan
+# -- Skipping module axi_burst_splitter_gran_counters
+# -- Skipping module axi_burst_unwrap
+# -- Skipping module axi_burst_unwrap_ax_chan
+# -- Skipping module axi_burst_counters
+# -- Skipping module axi_bus_compare
+# -- Skipping module axi_cdc_dst
+# -- Skipping module axi_cdc_dst_intf
+# -- Skipping module axi_lite_cdc_dst_intf
+# -- Skipping module axi_cdc_src
+# -- Skipping module axi_cdc_src_intf
+# -- Skipping module axi_lite_cdc_src_intf
+# -- Skipping module axi_cut
+# -- Skipping module axi_cut_intf
+# -- Skipping module axi_lite_cut_intf
+# -- Skipping module axi_delayer
+# -- Skipping module axi_delayer_intf
+# -- Skipping module axi_demux_simple
+# -- Skipping module axi_demux_id_counters
+# -- Skipping module axi_dw_downsizer
+# -- Skipping module axi_dw_upsizer
+# -- Skipping module axi_fifo
+# -- Skipping module axi_fifo_intf
+# -- Skipping module axi_fifo_delay_dyn
+# -- Skipping module axi_fifo_delay_dyn_intf
+# -- Skipping module stream_fifo_delay_dyn
+# -- Skipping module axi_id_remap
+# -- Skipping module axi_id_remap_table
+# -- Skipping module axi_id_remap_intf
+# -- Skipping module axi_id_prepend
+# -- Compiling module axi_inval_filter
+# -- Skipping module axi_isolate
+# -- Skipping module axi_isolate_inner
+# -- Skipping module axi_isolate_intf
+# -- Skipping module axi_join_intf
+# -- Skipping module axi_lite_demux
+# -- Skipping module axi_lite_demux_intf
+# -- Skipping module axi_lite_dw_converter
+# -- Skipping module axi_lite_dw_converter_intf
+# -- Skipping module axi_lite_from_mem
+# -- Skipping module axi_lite_join_intf
+# -- Skipping module axi_lite_lfsr
+# -- Skipping module axi_opt_lfsr
+# -- Skipping module axi_lite_mailbox
+# -- Skipping module axi_lite_mailbox_slave
+# -- Skipping module axi_lite_mailbox_intf
+# -- Skipping module axi_lite_mux
+# -- Skipping module axi_lite_mux_intf
+# -- Skipping module axi_lite_regs
+# -- Skipping module axi_lite_regs_intf
+# -- Skipping module axi_lite_to_apb
+# -- Skipping module axi_lite_to_apb_intf
+# -- Skipping module axi_lite_to_axi
+# -- Skipping module axi_lite_to_axi_intf
+# -- Skipping module axi_modify_address
+# -- Skipping module axi_modify_address_intf
+# -- Skipping module axi_mux
+# -- Skipping module axi_mux_intf
+# -- Skipping module axi_rw_join
+# -- Skipping module axi_rw_split
+# -- Skipping module axi_serializer
+# -- Skipping module axi_serializer_intf
+# -- Skipping module axi_slave_compare
+# -- Skipping module axi_throttle
+# -- Skipping module axi_to_detailed_mem
+# -- Skipping module axi_to_detailed_mem_intf
+# -- Skipping module mem_stream_to_banks_detailed
+# -- Skipping module axi_burst_splitter
+# -- Skipping module axi_cdc
+# -- Skipping module axi_cdc_intf
+# -- Skipping module axi_lite_cdc_intf
+# -- Skipping module axi_demux
+# -- Skipping module axi_demux_intf
+# -- Skipping module axi_err_slv
+# -- Skipping module axi_dw_converter
+# -- Skipping module axi_dw_converter_intf
+# -- Skipping module axi_from_mem
+# -- Skipping module axi_id_serialize
+# -- Skipping module axi_id_serialize_intf
+# -- Skipping module axi_lfsr
+# -- Skipping module axi_multicut
+# -- Skipping module axi_multicut_intf
+# -- Skipping module axi_lite_multicut_intf
+# -- Skipping module axi_to_axi_lite
+# -- Skipping module axi_to_axi_lite_id_reflect
+# -- Skipping module axi_to_axi_lite_intf
+# -- Skipping module axi_to_mem
+# -- Skipping module axi_to_mem_intf
+# -- Skipping module axi_zero_mem
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_interleaved_xbar.sv(56): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_interleaved_xbar
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_interleaved_xbar.sv(344): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_interleaved_xbar_intf
+# -- Skipping module axi_iw_converter
+# -- Skipping module axi_iw_converter_intf
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_xbar.sv(44): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_lite_xbar
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_lite_xbar.sv(253): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_lite_xbar_intf
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar_unmuxed.sv(78): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_xbar_unmuxed
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar_unmuxed.sv(291): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_xbar_unmuxed_intf
+# -- Skipping module axi_to_mem_banked
+# -- Skipping module axi_to_mem_banked_intf
+# -- Skipping module axi_to_mem_interleaved
+# -- Skipping module axi_to_mem_interleaved_intf
+# -- Skipping module axi_to_mem_split
+# -- Skipping module axi_to_mem_split_intf
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar.sv(90): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_xbar
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_xbar.sv(192): (vlog-13314) Defaulting port 'default_mst_port_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_xbar_intf
+# -- Skipping module axi_xp
+# -- Skipping module axi_xp_intf
+# 
+# Top level modules:
+# 	axi_atop_filter_intf
+# 	axi_burst_unwrap
+# 	axi_cdc_dst_intf
+# 	axi_lite_cdc_dst_intf
+# 	axi_cdc_src_intf
+# 	axi_lite_cdc_src_intf
+# 	axi_cut_intf
+# 	axi_lite_cut_intf
+# 	axi_delayer_intf
+# 	axi_fifo_intf
+# 	axi_fifo_delay_dyn_intf
+# 	axi_id_remap_intf
+# 	axi_inval_filter
+# 	axi_isolate_intf
+# 	axi_join_intf
+# 	axi_lite_demux_intf
+# 	axi_lite_dw_converter_intf
+# 	axi_lite_join_intf
+# 	axi_lite_mailbox_intf
+# 	axi_lite_mux_intf
+# 	axi_lite_regs_intf
+# 	axi_lite_to_apb_intf
+# 	axi_lite_to_axi_intf
+# 	axi_modify_address_intf
+# 	axi_mux_intf
+# 	axi_rw_join
+# 	axi_rw_split
+# 	axi_serializer_intf
+# 	axi_slave_compare
+# 	axi_throttle
+# 	axi_to_detailed_mem_intf
+# 	axi_cdc_intf
+# 	axi_lite_cdc_intf
+# 	axi_demux_intf
+# 	axi_dw_converter_intf
+# 	axi_from_mem
+# 	axi_id_serialize_intf
+# 	axi_lfsr
+# 	axi_multicut_intf
+# 	axi_lite_multicut_intf
+# 	axi_to_axi_lite_intf
+# 	axi_to_mem_intf
+# 	axi_zero_mem
+# 	axi_interleaved_xbar_intf
+# 	axi_iw_converter_intf
+# 	axi_lite_xbar_intf
+# 	axi_xbar_unmuxed_intf
+# 	axi_to_mem_banked_intf
+# 	axi_to_mem_interleaved_intf
+# 	axi_to_mem_split_intf
+# 	axi_xbar_intf
+# 	axi_xp_intf
+# End time: 17:22:36 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 8
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:40 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_chan_compare.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_dumper.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_sim_mem.sv /scratch/msc26h14/AraXL/hardware/deps/axi/src/axi_test.sv 
+# -- Skipping module axi_chan_compare
+# -- Skipping module axi_dumper
+# -- Skipping module axi_dumper_intf
+# -- Skipping module axi_sim_mem
+# -- Skipping module axi_sim_mem_intf
+# -- Skipping module axi_sim_mem_multiport_intf
+# -- Skipping package axi_test
+# -- Skipping module axi_chan_logger
+# 
+# Top level modules:
+# 	axi_chan_compare
+# 	axi_dumper_intf
+# 	axi_sim_mem_intf
+# 	axi_sim_mem_multiport_intf
+# 	axi_chan_logger
+# End time: 17:22:40 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:40 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_cast_multi.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_classifier.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/clk/rtl/gated_clk_cell.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_prepare.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_special.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_srt_single.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_top.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_frbus.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_src_type.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_ctrl.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_double.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_ff1.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_pack.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_prepare.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_round.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_scalar_dp.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_srt_radix16_bound_table.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_srt_radix16_with_sqrt.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_srt.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/vendor/openc910/C910_RTL_FACTORY/gen_rtl/vfdsu/rtl/ct_vfdsu_top.v /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_32.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_64_multi.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_multi.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_fma.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_fma_multi.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_sdotp_multi.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_sdotp_multi_wrapper.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_noncomp.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_block.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_fmt_slice.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_multifmt_slice.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_rounding.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/lfsr_sr.sv /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_top.sv 
+# -- Skipping package fpnew_pkg
+# -- Skipping module fpnew_cast_multi
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_classifier.sv(22): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_classifier
+# -- Skipping module gated_clk_cell
+# -- Skipping module pa_fdsu_ctrl
+# -- Skipping module pa_fdsu_ff1
+# -- Skipping module pa_fdsu_pack_single
+# -- Skipping module pa_fdsu_prepare
+# -- Skipping module pa_fdsu_round_single
+# -- Skipping module pa_fdsu_special
+# -- Skipping module pa_fdsu_srt_single
+# -- Skipping module pa_fdsu_top
+# -- Skipping module pa_fpu_dp
+# -- Skipping module pa_fpu_frbus
+# -- Skipping module pa_fpu_src_type
+# -- Skipping module ct_vfdsu_ctrl
+# -- Skipping module ct_vfdsu_double
+# -- Skipping module ct_vfdsu_ff1
+# -- Skipping module ct_vfdsu_pack
+# -- Skipping module ct_vfdsu_prepare
+# -- Skipping module ct_vfdsu_round
+# -- Skipping module ct_vfdsu_scalar_dp
+# -- Skipping module ct_vfdsu_srt_radix16_bound_table
+# -- Skipping module ct_vfdsu_srt_radix16_with_sqrt
+# -- Skipping module ct_vfdsu_srt
+# -- Skipping module ct_vfdsu_top
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_32.sv(35): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_32.sv(36): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_divsqrt_th_32
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_64_multi.sv(34): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_th_64_multi.sv(35): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_divsqrt_th_64_multi
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_multi.sv(32): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_divsqrt_multi.sv(33): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_divsqrt_multi
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_fma.sv(30): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_fma
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_fma_multi.sv(31): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_fma_multi.sv(32): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_fma_multi
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_sdotp_multi.sv(72): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_sdotp_multi
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_sdotp_multi_wrapper.sv(40): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_sdotp_multi_wrapper.sv(41): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_sdotp_multi_wrapper
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_noncomp.sv(30): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_noncomp
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_block.sv(41): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_block.sv(42): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_opgroup_block
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_fmt_slice.sv(35): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_opgroup_fmt_slice
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_multifmt_slice.sv(40): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_opgroup_multifmt_slice.sv(41): (vlog-13314) Defaulting port 'is_boxed_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_opgroup_multifmt_slice
+# -- Skipping module fpnew_rounding
+# -- Skipping module lfsr_sr
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/fpnew/src/fpnew_top.sv(37): (vlog-13314) Defaulting port 'operands_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module fpnew_top
+# 
+# Top level modules:
+# 	fpnew_top
+# End time: 17:22:40 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:43 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/apb/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_intf.sv /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_err_slv.sv /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_regs.sv /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_cdc.sv /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_demux.sv 
+# -- Skipping package apb_pkg
+# -- Skipping interface APB
+# -- Skipping interface APB_DV
+# -- Skipping module apb_err_slv
+# -- Skipping module apb_err_slv_intf
+# -- Skipping module apb_regs
+# -- Skipping module apb_regs_intf
+# -- Skipping module apb_cdc
+# -- Skipping module apb_cdc_intf
+# -- Skipping module apb_demux
+# -- Skipping module apb_demux_intf
+# 
+# Top level modules:
+# 	apb_err_slv_intf
+# 	apb_regs_intf
+# 	apb_cdc_intf
+# 	apb_demux_intf
+# End time: 17:22:43 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:43 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/apb/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/apb/src/apb_test.sv 
+# -- Skipping package apb_test
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:22:43 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:44 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_res_tbl.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_amos_alu.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_amos.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_lrsc.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_atomics.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_lrsc_wrap.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_amos_wrap.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_atomics_wrap.sv /scratch/msc26h14/AraXL/hardware/deps/axi_riscv_atomics/src/axi_riscv_atomics_structs.sv 
+# -- Skipping module axi_res_tbl
+# -- Skipping module axi_riscv_amos_alu
+# -- Skipping module axi_riscv_amos
+# -- Skipping module axi_riscv_lrsc
+# -- Skipping module axi_riscv_atomics
+# -- Skipping module axi_riscv_lrsc_wrap
+# -- Skipping module axi_riscv_amos_wrap
+# -- Skipping module axi_riscv_atomics_wrap
+# -- Skipping module axi_riscv_atomics_structs
+# 
+# Top level modules:
+# 	axi_riscv_lrsc_wrap
+# 	axi_riscv_amos_wrap
+# 	axi_riscv_atomics_structs
+# End time: 17:22:44 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:44 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/config_pkg.sv 
+# -- Skipping package config_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:22:44 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:44 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/cv64a6_imafdcv_sv39_config_pkg.sv 
+# -- Skipping package cva6_config_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:22:44 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:44 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/riscv_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/ariane_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/build_config_pkg.sv 
+# -- Skipping package riscv
+# -- Skipping package ariane_pkg
+# -- Skipping package build_config_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:22:44 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:45 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_accel_first_pass_decoder_stub.sv 
+# -- Compiling module cva6_accel_first_pass_decoder
+# 
+# Top level modules:
+# 	cva6_accel_first_pass_decoder
+# End time: 17:22:45 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:45 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_tlb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_shared_tlb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_mmu.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_ptw.sv 
+# -- Skipping module cva6_tlb
+# -- Skipping module cva6_shared_tlb
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_mmu.sv(103): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_mmu.sv(104): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_mmu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_ptw.sv(86): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_mmu/cva6_ptw.sv(87): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_ptw
+# 
+# Top level modules:
+# 	cva6_mmu
+# End time: 17:22:45 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:45 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/wt_cache_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/std_cache_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_example/include/cvxif_instr_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_fu.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_issue_register_commit_if_driver.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_compressed_if_driver.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_example/cvxif_example_coprocessor.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cvxif_example/instr_decoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_fifo_v3.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/alu.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/fpu_wrap.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/branch_unit.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/compressed_decoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/controller.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/csr_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/csr_regfile.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/decoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/acc_dispatcher.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/instr_realign.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/macro_decoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/id_stage.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_read_operands.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/load_unit.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/load_store_unit.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/lsu_bypass.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/mult.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/multiplier.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/serdiv.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/perf_counters.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_ff.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_fpga.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/scoreboard.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/raw_checker.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/store_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/amo_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/store_unit.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/commit_stage.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/axi_shim.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/btb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/bht.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/bht2lvl.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/ras.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/instr_scan.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/instr_queue.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/frontend.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_ctrl.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_mem.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_wbuffer.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_cache_subsystem.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_axi_adapter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_icache.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/tag_cmp.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cache_ctrl.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/amo_alu.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/axi_adapter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/miss_handler.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/std_nbdcache.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_icache_axi_wrapper.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/std_cache_subsystem.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_resp_demux.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_to_axi_read.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_to_axi_write.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_req_read_arbiter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_req_write_arbiter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_demux.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_lfsr.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sync_buffer.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_fifo_reg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_fifo_reg_initialized.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_fxarb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_rrarb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_mux.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_decoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_1hot_to_binary.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_prio_1hot_encoder.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sram.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sram_wbyteenable.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sram_wmask.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_regbank_wmask_1rw.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_downsize.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_upsize.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_resize.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_arb.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_amo.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_cmo.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_core_arbiter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_ctrl.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_ctrl_pe.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_memctrl.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_miss_handler.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_mshr.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_rtab.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_uncached.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_victim_plru.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_victim_random.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_victim_sel.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_wbuf.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_flush.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_if_adapter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_wrapper.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache_tc_sram.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp_entry.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp_data_if.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/vendor/pulp-platform/fpga-support/fpga-support-stubs.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/tc_sram_wrapper.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/tc_sram_wrapper_cache_techno.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/sram_pulp.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/sram_cache.sv 
+# -- Skipping package wt_cache_pkg
+# -- Skipping package std_cache_pkg
+# -- Skipping package cvxif_instr_pkg
+# -- Skipping module cvxif_fu
+# -- Skipping module cvxif_issue_register_commit_if_driver
+# -- Skipping module cvxif_compressed_if_driver
+# -- Skipping module cvxif_example_coprocessor
+# -- Skipping module instr_decoder
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(29): (vlog-13314) Defaulting port 'instruction_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(32): (vlog-13314) Defaulting port 'issue_pointer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(33): (vlog-13314) Defaulting port 'commit_pointer_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(39): (vlog-13314) Defaulting port 'rs1_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(40): (vlog-13314) Defaulting port 'rs2_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(48): (vlog-13314) Defaulting port 'wbdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cva6_rvfi_probes.sv(52): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_rvfi_probes
+# -- Skipping module cva6_fifo_v3
+# -- Skipping module cva6
+# -- Skipping module alu
+# -- Skipping module fpu_wrap
+# -- Skipping module branch_unit
+# -- Skipping module compressed_decoder
+# -- Skipping module controller
+# -- Skipping module csr_buffer
+# -- Skipping module csr_regfile
+# -- Skipping module decoder
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(45): (vlog-13314) Defaulting port 'rs1_forwarding_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(47): (vlog-13314) Defaulting port 'rs2_forwarding_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(57): (vlog-13314) Defaulting port 'tinst_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(228): (vlog-13314) Defaulting port 'amo_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(234): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ex_stage.sv(236): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ex_stage
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/acc_dispatcher.sv(44): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/acc_dispatcher.sv(45): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module acc_dispatcher
+# -- Skipping module instr_realign
+# -- Skipping module macro_decoder
+# -- Skipping module id_stage
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_read_operands.sv(45): (vlog-13314) Defaulting port 'orig_instr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_read_operands.sv(120): (vlog-13314) Defaulting port 'waddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_read_operands.sv(122): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module issue_read_operands
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv(50): (vlog-13314) Defaulting port 'orig_instr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv(134): (vlog-13314) Defaulting port 'trans_id_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv(138): (vlog-13314) Defaulting port 'wbdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv(148): (vlog-13314) Defaulting port 'waddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/issue_stage.sv(150): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module issue_stage
+# -- Skipping module load_unit
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/load_store_unit.sv(154): (vlog-13314) Defaulting port 'amo_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/load_store_unit.sv(157): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/load_store_unit.sv(159): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module load_store_unit
+# -- Skipping module lsu_bypass
+# -- Skipping module mult
+# -- Skipping module multiplier
+# -- Skipping module serdiv
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/perf_counters.sv(57): (vlog-13314) Defaulting port 'miss_vld_bits_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module perf_counters
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_ff.sv(37): (vlog-13314) Defaulting port 'raddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_ff.sv(40): (vlog-13314) Defaulting port 'waddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_ff.sv(41): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ariane_regfile
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_fpga.sv(41): (vlog-13314) Defaulting port 'raddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_fpga.sv(44): (vlog-13314) Defaulting port 'waddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/ariane_regfile_fpga.sv(45): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ariane_regfile_fpga
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/scoreboard.sv(54): (vlog-13314) Defaulting port 'orig_instr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/scoreboard.sv(75): (vlog-13314) Defaulting port 'trans_id_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/scoreboard.sv(77): (vlog-13314) Defaulting port 'wbdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module scoreboard
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/raw_checker.sv(24): (vlog-13314) Defaulting port 'rd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module raw_checker
+# -- Skipping module store_buffer
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/amo_buffer.sv(32): (vlog-13314) Defaulting port 'amo_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module amo_buffer
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/store_unit.sv(82): (vlog-13314) Defaulting port 'amo_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module store_unit
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/commit_stage.sv(54): (vlog-13314) Defaulting port 'amo_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module commit_stage
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/axi_shim.sv(51): (vlog-13314) Defaulting port 'wr_data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/axi_shim.sv(52): (vlog-13314) Defaulting port 'wr_user_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/axi_shim.sv(53): (vlog-13314) Defaulting port 'wr_be_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_shim
+# -- Skipping module btb
+# -- Skipping module bht
+# -- Skipping module bht2lvl
+# -- Skipping module ras
+# -- Skipping module instr_scan
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/instr_queue.sv(59): (vlog-13314) Defaulting port 'instr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/instr_queue.sv(61): (vlog-13314) Defaulting port 'addr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/frontend/instr_queue.sv(78): (vlog-13314) Defaulting port 'cf_type_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module instr_queue
+# -- Skipping module frontend
+# -- Skipping module wt_dcache_ctrl
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_mem.sv(42): (vlog-13314) Defaulting port 'rd_tag_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_mem.sv(43): (vlog-13314) Defaulting port 'rd_idx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_mem.sv(44): (vlog-13314) Defaulting port 'rd_off_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module wt_dcache_mem
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(41): (vlog-13314) Defaulting port 'amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(48): (vlog-13314) Defaulting port 'miss_wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(49): (vlog-13314) Defaulting port 'miss_wuser_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(50): (vlog-13314) Defaulting port 'miss_paddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(51): (vlog-13314) Defaulting port 'miss_vld_bits_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(52): (vlog-13314) Defaulting port 'miss_size_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(53): (vlog-13314) Defaulting port 'miss_id_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache_missunit.sv(60): (vlog-13314) Defaulting port 'tx_paddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module wt_dcache_missunit
+# -- Skipping module wt_dcache_wbuffer
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_dcache.sv(45): (vlog-13314) Defaulting port 'amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module wt_dcache
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/wt_cache_subsystem.sv(63): (vlog-13314) Defaulting port 'dcache_amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module wt_cache_subsystem
+# -- Skipping module wt_axi_adapter
+# -- Skipping module cva6_icache
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/tag_cmp.sv(28): (vlog-13314) Defaulting port 'req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/tag_cmp.sv(30): (vlog-13314) Defaulting port 'addr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/tag_cmp.sv(35): (vlog-13314) Defaulting port 'tag_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module tag_cmp
+# -- Skipping module cache_ctrl
+# -- Skipping module amo_alu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/axi_adapter.sv(37): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/axi_adapter.sv(38): (vlog-13314) Defaulting port 'be_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module axi_adapter
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/miss_handler.sv(39): (vlog-13314) Defaulting port 'miss_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/miss_handler.sv(58): (vlog-13314) Defaulting port 'mshr_addr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/miss_handler.sv(62): (vlog-13314) Defaulting port 'amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module miss_handler
+# -- Skipping module axi_adapter_arbiter
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/std_nbdcache.sv(38): (vlog-13314) Defaulting port 'amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module std_nbdcache
+# -- Skipping module cva6_icache_axi_wrapper
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/std_cache_subsystem.sv(55): (vlog-13314) Defaulting port 'amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module std_cache_subsystem
+# -- Skipping package hpdcache_pkg
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_resp_demux.sv(50): (vlog-13314) Defaulting port 'mem_resp_ready_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_mem_resp_demux
+# -- Skipping module hpdcache_mem_to_axi_read
+# -- Skipping module hpdcache_mem_to_axi_write
+# -- Skipping module hpdcache_mem_req_read_arbiter
+# -- Skipping module hpdcache_mem_req_write_arbiter
+# -- Skipping module hpdcache_demux
+# -- Skipping module hpdcache_lfsr
+# -- Skipping module hpdcache_sync_buffer
+# -- Skipping module hpdcache_fifo_reg
+# -- Skipping module hpdcache_fifo_reg_initialized
+# -- Skipping module hpdcache_fxarb
+# -- Skipping module hpdcache_rrarb
+# -- Skipping module hpdcache_mux
+# -- Skipping module hpdcache_decoder
+# -- Skipping module hpdcache_1hot_to_binary
+# -- Skipping module hpdcache_prio_1hot_encoder
+# -- Skipping module hpdcache_sram
+# -- Skipping module hpdcache_sram_wbyteenable
+# -- Skipping module hpdcache_sram_wmask
+# -- Skipping module hpdcache_regbank_wbyteenable_1rw
+# -- Skipping module hpdcache_regbank_wmask_1rw
+# -- Skipping module hpdcache_data_downsize
+# -- Skipping module hpdcache_data_upsize
+# -- Skipping module hpdcache_data_resize
+# -- Skipping package hwpf_stride_pkg
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride.sv(50): (vlog-13314) Defaulting port 'csr_base_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride.sv(52): (vlog-13314) Defaulting port 'csr_param_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride.sv(54): (vlog-13314) Defaulting port 'csr_throttle_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hwpf_stride
+# -- Skipping module hwpf_stride_arb
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv(61): (vlog-13314) Defaulting port 'hwpf_stride_base_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv(65): (vlog-13314) Defaulting port 'hwpf_stride_param_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv(69): (vlog-13314) Defaulting port 'hwpf_stride_throttle_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hwpf_stride_wrapper
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache.sv(77): (vlog-13314) Defaulting port 'core_req_valid_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache.sv(81): (vlog-13314) Defaulting port 'core_req_abort_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache.sv(83): (vlog-13314) Defaulting port 'core_req_pma_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_amo.sv(33): (vlog-13314) Defaulting port 'op_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_amo
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_cmo.sv(65): (vlog-13314) Defaulting port 'req_op_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_cmo
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_core_arbiter.sv(47): (vlog-13314) Defaulting port 'core_req_valid_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_core_arbiter.sv(51): (vlog-13314) Defaulting port 'core_req_abort_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_core_arbiter.sv(53): (vlog-13314) Defaulting port 'core_req_pma_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_core_arbiter
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_ctrl.sv(78): (vlog-13314) Defaulting port 'core_req_pma_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_ctrl
+# -- Skipping module hpdcache_ctrl_pe
+# -- Skipping module hpdcache_memctrl
+# -- Skipping module hpdcache_miss_handler
+# -- Skipping module hpdcache_mshr
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_rtab.sv(67): (vlog-13314) Defaulting port 'alloc_deps_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_rtab
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/src/hpdcache_uncached.sv(76): (vlog-13314) Defaulting port 'req_op_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module hpdcache_uncached
+# -- Skipping module hpdcache_victim_plru
+# -- Skipping module hpdcache_victim_random
+# -- Skipping module hpdcache_victim_sel
+# -- Skipping module hpdcache_wbuf
+# -- Skipping module hpdcache_flush
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_if_adapter.sv(43): (vlog-13314) Defaulting port 'cva6_amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_hpdcache_if_adapter
+# -- Skipping module cva6_hpdcache_subsystem_axi_arbiter
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem.sv(91): (vlog-13314) Defaulting port 'dcache_amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem.sv(111): (vlog-13314) Defaulting port 'hwpf_base_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem.sv(117): (vlog-13314) Defaulting port 'hwpf_param_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_subsystem.sv(123): (vlog-13314) Defaulting port 'hwpf_throttle_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_hpdcache_subsystem
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_wrapper.sv(72): (vlog-13314) Defaulting port 'dcache_amo_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_wrapper.sv(86): (vlog-13314) Defaulting port 'hwpf_base_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_wrapper.sv(89): (vlog-13314) Defaulting port 'hwpf_param_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/cva6_hpdcache_wrapper.sv(92): (vlog-13314) Defaulting port 'hwpf_throttle_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module cva6_hpdcache_wrapper
+# -- Skipping module hpdcache_sram_1rw
+# -- Skipping module hpdcache_sram_wbyteenable_1rw
+# -- Skipping module hpdcache_sram_wmask_1rw
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp.sv(25): (vlog-13314) Defaulting port 'conf_addr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp.sv(26): (vlog-13314) Defaulting port 'conf_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module pmp
+# -- Skipping module pmp_entry
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp_data_if.sv(39): (vlog-13314) Defaulting port 'pmpcfg_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/core/pmp/src/pmp_data_if.sv(40): (vlog-13314) Defaulting port 'pmpaddr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module pmp_data_if
+# -- Skipping module SyncDpRam
+# -- Skipping module AsyncDpRam
+# -- Skipping module AsyncThreePortRam
+# -- Skipping module tc_sram_wrapper
+# -- Skipping module tc_sram_wrapper_cache_techno
+# -- Compiling module sram
+# -- Skipping module sram_cache
+# 
+# Top level modules:
+# 	cvxif_example_coprocessor
+# 	cva6
+# 	amo_alu
+# 	hpdcache_fifo_reg_initialized
+# 	tc_sram_wrapper
+# End time: 17:22:45 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 100
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:55 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/core/include/instr_tracer_pkg.sv /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/instr_tracer.sv 
+# -- Skipping package instr_tracer_pkg
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/instr_tracer.sv(32): (vlog-13314) Defaulting port 'instruction' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/instr_tracer.sv(37): (vlog-13314) Defaulting port 'waddr' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/deps/cva6/common/local/util/instr_tracer.sv(38): (vlog-13314) Defaulting port 'wdata' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module instr_tracer
+# -- Skipping package instr_tracer_sv_unit
+# 
+# Top level modules:
+# 	instr_tracer
+# End time: 17:22:56 on Nov 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:22:56 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/apb/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" "+incdir+/scratch/msc26h14/AraXL/hardware/include" /scratch/msc26h14/AraXL/hardware/include/rvv_pkg.sv /scratch/msc26h14/AraXL/hardware/include/ara_pkg.sv /scratch/msc26h14/AraXL/hardware/src/cva6_cut.sv /scratch/msc26h14/AraXL/hardware/src/req_fork_cut.sv /scratch/msc26h14/AraXL/hardware/src/ctrl_registers.sv /scratch/msc26h14/AraXL/hardware/src/cva6_accel_first_pass_decoder.sv /scratch/msc26h14/AraXL/hardware/src/ara_dispatcher.sv /scratch/msc26h14/AraXL/hardware/src/ara_sequencer.sv /scratch/msc26h14/AraXL/hardware/src/lane/lane_sequencer.sv /scratch/msc26h14/AraXL/hardware/src/lane/operand_queue.sv /scratch/msc26h14/AraXL/hardware/src/lane/operand_requester.sv /scratch/msc26h14/AraXL/hardware/src/lane/simd_alu.sv /scratch/msc26h14/AraXL/hardware/src/lane/simd_div.sv /scratch/msc26h14/AraXL/hardware/src/lane/simd_mul.sv /scratch/msc26h14/AraXL/hardware/src/lane/vector_regfile.sv /scratch/msc26h14/AraXL/hardware/src/lane/power_gating_generic.sv /scratch/msc26h14/AraXL/hardware/src/lane/power_gating_tech.sv /scratch/msc26h14/AraXL/hardware/src/masku/masku.sv /scratch/msc26h14/AraXL/hardware/src/sldu/p2_stride_gen.sv /scratch/msc26h14/AraXL/hardware/src/sldu/ring_router.sv /scratch/msc26h14/AraXL/hardware/src/sldu/sldu_op_dp.sv /scratch/msc26h14/AraXL/hardware/src/sldu/sldu.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/addrgen.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/vldu.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/vstu.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/global_ldst.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/align_stage.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/shuffle_stage.sv /scratch/msc26h14/AraXL/hardware/src/lane/operand_queues_stage.sv /scratch/msc26h14/AraXL/hardware/src/lane/valu.sv /scratch/msc26h14/AraXL/hardware/src/lane/vmfpu.sv /scratch/msc26h14/AraXL/hardware/src/lane/fixed_p_rounding.sv /scratch/msc26h14/AraXL/hardware/src/vlsu/vlsu.sv /scratch/msc26h14/AraXL/hardware/src/lane/vector_fus_stage.sv /scratch/msc26h14/AraXL/hardware/src/lane/lane.sv /scratch/msc26h14/AraXL/hardware/src/ara.sv /scratch/msc26h14/AraXL/hardware/src/ara_macro.sv /scratch/msc26h14/AraXL/hardware/src/ara_cluster.sv /scratch/msc26h14/AraXL/hardware/src/axi_inval_filter.sv /scratch/msc26h14/AraXL/hardware/src/ara_vector_unit.sv /scratch/msc26h14/AraXL/hardware/src/ara_multithreading_system.sv /scratch/msc26h14/AraXL/hardware/src/ara_system.sv /scratch/msc26h14/AraXL/hardware/src/host_system.sv /scratch/msc26h14/AraXL/hardware/src/l2_mem_interconnect.sv /scratch/msc26h14/AraXL/hardware/src/ara_soc.sv 
+# -- Skipping package rvv_pkg
+# -- Skipping package ara_pkg
+# -- Skipping module cva6_cut
+# -- Skipping module req_fork_cut
+# -- Skipping module ctrl_registers
+# -- Compiling module cva6_accel_first_pass_decoder
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/ara_dispatcher.sv(47): (vlog-13314) Defaulting port 'fflags_ex_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ara_dispatcher
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/ara_sequencer.sv(38): (vlog-13314) Defaulting port 'pe_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ara_sequencer
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/lane_sequencer.sv(21): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module lane_sequencer
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/operand_queue.sv(35): (vlog-13314) Defaulting port 'operand_queue_cmd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module operand_queue
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/operand_requester.sv(21): (vlog-13314) Defaulting port 'global_hazard_table_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/operand_requester.sv(23): (vlog-13314) Defaulting port 'operand_request_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module operand_requester
+# -- Skipping module simd_alu
+# -- Skipping module simd_div
+# -- Skipping module simd_mul
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vector_regfile.sv(23): (vlog-13314) Defaulting port 'tgt_opqueue_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vector_regfile.sv(25): (vlog-13314) Defaulting port 'wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vector_regfile
+# -- Skipping module power_gating_generic
+# -- Skipping module power_gating_tech
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/masku/masku.sv(23): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/masku/masku.sv(31): (vlog-13314) Defaulting port 'masku_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/masku/masku.sv(32): (vlog-13314) Defaulting port 'masku_operand_valid_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module masku
+# -- Skipping module p2_stride_gen
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/ring_router.sv(25): (vlog-13314) Defaulting port 'sldu_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/ring_router.sv(34): (vlog-13314) Defaulting port 'ring_right_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/ring_router.sv(38): (vlog-13314) Defaulting port 'ring_left_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ring_router
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/sldu_op_dp.sv(17): (vlog-13314) Defaulting port 'op_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module sldu_op_dp
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/sldu.sv(25): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/sldu.sv(31): (vlog-13314) Defaulting port 'sldu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/sldu.sv(32): (vlog-13314) Defaulting port 'sldu_operand_target_fu_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/sldu/sldu.sv(59): (vlog-13314) Defaulting port 'sldu_ring_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module sldu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/addrgen.sv(42): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/addrgen.sv(55): (vlog-13314) Defaulting port 'addrgen_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/addrgen.sv(56): (vlog-13314) Defaulting port 'addrgen_operand_target_fu_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module addrgen
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vldu.sv(32): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vldu.sv(38): (vlog-13314) Defaulting port 'axi_addrgen_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vldu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vstu.sv(43): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vstu.sv(49): (vlog-13314) Defaulting port 'axi_addrgen_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vstu.sv(53): (vlog-13314) Defaulting port 'stu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vstu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/global_ldst.sv(31): (vlog-13314) Defaulting port 'cluster_metadata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module global_ldst
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/align_stage.sv(34): (vlog-13314) Defaulting port 'cluster_metadata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module align_stage
+# -- Skipping module shift
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/shuffle_stage.sv(35): (vlog-13314) Defaulting port 'cluster_metadata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module shuffle_stage
+# -- Skipping module shuffle
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/operand_queues_stage.sv(19): (vlog-13314) Defaulting port 'operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/operand_queues_stage.sv(24): (vlog-13314) Defaulting port 'operand_queue_cmd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module operand_queues_stage
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/valu.sv(30): (vlog-13314) Defaulting port 'vfu_operation_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/valu.sv(35): (vlog-13314) Defaulting port 'alu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module valu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vmfpu.sv(39): (vlog-13314) Defaulting port 'vfu_operation_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vmfpu.sv(44): (vlog-13314) Defaulting port 'mfpu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vmfpu
+# -- Skipping module fixed_p_rounding
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vlsu.sv(49): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vlsu.sv(60): (vlog-13314) Defaulting port 'stu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vlsu.sv(64): (vlog-13314) Defaulting port 'addrgen_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/vlsu/vlsu.sv(65): (vlog-13314) Defaulting port 'addrgen_operand_target_fu_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vlsu
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vector_fus_stage.sv(36): (vlog-13314) Defaulting port 'vfu_operation_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vector_fus_stage.sv(43): (vlog-13314) Defaulting port 'alu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/vector_fus_stage.sv(46): (vlog-13314) Defaulting port 'mfpu_operand_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module vector_fus_stage
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/lane.sv(47): (vlog-13314) Defaulting port 'pe_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/lane/lane.sv(54): (vlog-13314) Defaulting port 'global_hazard_table_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module lane
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/ara.sv(79): (vlog-13314) Defaulting port 'ring_data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ara
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/ara_macro.sv(79): (vlog-13314) Defaulting port 'ring_data_r_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/ara_macro.sv(83): (vlog-13314) Defaulting port 'ring_data_l_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module ara_macro
+# -- Skipping module ara_cluster
+# -- Compiling module axi_inval_filter
+# -- Skipping module ara_multithreading_system
+# -- Skipping module acc_mt_arbiter
+# -- Skipping module ara_system
+# -- Skipping module host_system
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/l2_mem_interconnect.sv(36): (vlog-13314) Defaulting port 'slv_ports_addr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/l2_mem_interconnect.sv(38): (vlog-13314) Defaulting port 'slv_ports_strb_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/l2_mem_interconnect.sv(40): (vlog-13314) Defaulting port 'slv_ports_wdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /scratch/msc26h14/AraXL/hardware/src/l2_mem_interconnect.sv(56): (vlog-13314) Defaulting port 'mst_ports_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Skipping module l2_mem_interconnect
+# -- Skipping module ara_soc
+# 
+# Top level modules:
+# 	cva6_accel_first_pass_decoder
+# 	power_gating_tech
+# 	ara_cluster
+# 	ara_soc
+# End time: 17:22:56 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 52
+# QuestaSim-64 vlog 10.7b_1 Compiler 2018.07 Jul 26 2018
+# Start time: 17:23:02 on Nov 10,2026
+# vlog -reportprogress 300 -incr -sv "+define+TARGET_ARA_TEST" "+define+TARGET_CV64A6_IMAFDCV_SV39" "+define+TARGET_CVA6_TEST" "+define+TARGET_RTL" "+define+TARGET_SIMULATION" "+define+TARGET_VSIM" "+define+NR_LANES=4" "+define+VLEN=4096" "+define+ARIANE_ACCELERATOR_PORT=1" "+define+USE_CLUSTER" "+define+NR_CLUSTERS=2" "+define+NR_CORES=2" "+define+NR_VEC_CORES=2" "+define+NR_L2_BANKS=1" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/apb/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/axi/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/common_cells/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/cache_subsystem/hpdcache/rtl/include" "+incdir+/scratch/msc26h14/AraXL/hardware/deps/cva6/core/include" "+incdir+/scratch/msc26h14/AraXL/hardware/include" /scratch/msc26h14/AraXL/hardware/deps/cva6/corev_apu/tb/common/mock_uart.sv /scratch/msc26h14/AraXL/hardware/tb/ara_testharness.sv /scratch/msc26h14/AraXL/hardware/tb/ara_tb.sv /scratch/msc26h14/AraXL/hardware/src/accel_dispatcher_ideal.sv 
+# -- Skipping module mock_uart
+# -- Skipping module ara_testharness
+# -- Skipping module ara_tb
+# -- Skipping package ara_tb_sv_unit
+# -- Skipping module accel_dispatcher_ideal
+# 
+# Top level modules:
+# 	ara_tb
+# 	accel_dispatcher_ideal
+# End time: 17:23:02 on Nov 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+# Break key hit

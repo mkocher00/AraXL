@@ -1,0 +1,246 @@
+cd build && \
+questa-2019.3 vsim -c  +UVM_NO_RELNOTES +PRELOAD="/scratch/msc26h14/AraXL/apps/bin/fmatmul" -sv_lib work-dpi/ara_dpi -work work -voptargs=+acc -suppress vsim-3009 -suppress vopt-7033 work.ara_tb -do "run -a"
+Reading pref.tcl
+
+# 2019.3
+
+# vsim -c "+UVM_NO_RELNOTES" "+PRELOAD=/scratch/msc26h14/AraXL/apps/bin/fmatmul" -sv_lib work-dpi/ara_dpi -work work -voptargs="+acc" -suppress vsim-3009 -suppress vopt-7033 work.ara_tb -do "run -a" 
+# Start time: 14:32:06 on Oct 12,2026
+# Loading /tmp/msc26h14@badile107.ee.ethz.ch_dpi_2827/linux_x86_64_gcc-8/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:65514): Syntax error, unexpected non-printable character with the hex value '0x74'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:65514): Syntax error, unexpected non-printable character with the hex value '0x23'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:65514): Syntax error, unexpected non-printable character with the hex value '0x65'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:65530): Syntax error, unexpected non-printable character with the hex value '0xc5'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:19): Syntax error, unexpected non-printable character with the hex value '0x92'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:19): Syntax error, unexpected non-printable character with the hex value '0xb2'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:19): Syntax error, unexpected non-printable character with the hex value '0xe9'.
+# ** Error: (vopt-13069) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): syntax error, unexpected MGC_res_wreal4state.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:20): Syntax error, unexpected non-printable character with the hex value '0x4e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:20): Syntax error, unexpected non-printable character with the hex value '0xcf'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:20): Syntax error, unexpected non-printable character with the hex value '0xbd'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:20): Syntax error, unexpected non-printable character with the hex value '0xf0'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:20): Syntax error, unexpected non-printable character with the hex value '0x71'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:59): Syntax error, unexpected non-printable character with the hex value '0xce'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:59): Syntax error, unexpected non-printable character with the hex value '0xcb'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:51): Syntax error, unexpected non-printable character with the hex value '0x8e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:51): Syntax error, unexpected non-printable character with the hex value '0xcd'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28147): Syntax error, unexpected non-printable character with the hex value '0x38'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28148): Syntax error, unexpected non-printable character with the hex value '0x1f'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28150): Syntax error, unexpected non-printable character with the hex value '0x3c'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28150): Syntax error, unexpected non-printable character with the hex value '0x61'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28150): Syntax error, unexpected non-printable character with the hex value '0x12'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28150): Syntax error, unexpected non-printable character with the hex value '0xd5'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:21751): Syntax error, unexpected non-printable character with the hex value '0xa9'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:21797): Syntax error, unexpected non-printable character with the hex value '0xf2'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:21826): Syntax error, unexpected non-printable character with the hex value '0x1d'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:21826): Syntax error, unexpected non-printable character with the hex value '0xc6'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:21775): Syntax error, unexpected non-printable character with the hex value '0xae'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:43340): Syntax error, unexpected non-printable character with the hex value '0xdc'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:43340): Syntax error, unexpected non-printable character with the hex value '0x0f'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:43306): Syntax error, unexpected non-printable character with the hex value '0x4e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:43306): Syntax error, unexpected non-printable character with the hex value '0x60'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5951): Syntax error, unexpected non-printable character with the hex value '0x2e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5951): Syntax error, unexpected non-printable character with the hex value '0x59'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5951): Syntax error, unexpected non-printable character with the hex value '0x0c'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5394): Syntax error, unexpected non-printable character with the hex value '0x45'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5394): Syntax error, unexpected non-printable character with the hex value '0xcb'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5401): Syntax error, unexpected non-printable character with the hex value '0xbc'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5401): Syntax error, unexpected non-printable character with the hex value '0x33'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:5769): Syntax error, unexpected non-printable character with the hex value '0x2d'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16262): Syntax error, unexpected non-printable character with the hex value '0xc5'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16262): Syntax error, unexpected non-printable character with the hex value '0x79'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16262): Syntax error, unexpected non-printable character with the hex value '0xaf'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16252): Syntax error, unexpected non-printable character with the hex value '0xf1'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16252): Syntax error, unexpected non-printable character with the hex value '0x54'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16252): Syntax error, unexpected non-printable character with the hex value '0x5f'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16265): Syntax error, unexpected non-printable character with the hex value '0xb9'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16212): Syntax error, unexpected non-printable character with the hex value '0x5d'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16212): Syntax error, unexpected non-printable character with the hex value '0x67'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:16212): Syntax error, unexpected non-printable character with the hex value '0x0f'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:9507): Syntax error, unexpected non-printable character with the hex value '0xb0'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11561): Syntax error, unexpected non-printable character with the hex value '0x9b'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xae'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xf6'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x7b'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x56'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11622): Syntax error, unexpected non-printable character with the hex value '0x17'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11623): Syntax error, unexpected non-printable character with the hex value '0x35'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11623): Syntax error, unexpected non-printable character with the hex value '0xff'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11623): Syntax error, unexpected non-printable character with the hex value '0x56'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xde'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x46'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xcb'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x31'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xe6'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0xf8'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x08'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:11624): Syntax error, unexpected non-printable character with the hex value '0x19'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:10035): Syntax error, unexpected non-printable character with the hex value '0x90'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:10265): Syntax error, unexpected non-printable character with the hex value '0xc3'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:10265): Syntax error, unexpected non-printable character with the hex value '0x47'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53214): Syntax error, unexpected non-printable character with the hex value '0xc9'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:47123): Syntax error, unexpected non-printable character with the hex value '0x34'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:47075): Syntax error, unexpected non-printable character with the hex value '0x59'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49172): Syntax error, unexpected non-printable character with the hex value '0xeb'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49124): Syntax error, unexpected non-printable character with the hex value '0x4f'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49074): Syntax error, unexpected non-printable character with the hex value '0x70'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49074): Syntax error, unexpected non-printable character with the hex value '0xc8'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49081): Syntax error, unexpected non-printable character with the hex value '0xd2'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49081): Syntax error, unexpected non-printable character with the hex value '0x17'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49081): Syntax error, unexpected non-printable character with the hex value '0xcf'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49034): Syntax error, unexpected non-printable character with the hex value '0xde'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49120): Syntax error, unexpected non-printable character with the hex value '0x90'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49120): Syntax error, unexpected non-printable character with the hex value '0xa0'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49205): Syntax error, unexpected non-printable character with the hex value '0x91'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49207): Syntax error, unexpected non-printable character with the hex value '0xa2'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49207): Syntax error, unexpected non-printable character with the hex value '0xf7'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:49545): Syntax error, unexpected non-printable character with the hex value '0x86'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53922): Syntax error, unexpected non-printable character with the hex value '0xe2'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53939): Syntax error, unexpected non-printable character with the hex value '0xc8'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53947): Syntax error, unexpected non-printable character with the hex value '0x82'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53947): Syntax error, unexpected non-printable character with the hex value '0x84'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53907): Syntax error, unexpected non-printable character with the hex value '0x99'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53919): Syntax error, unexpected non-printable character with the hex value '0x98'.
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53921): Syntax error, unexpected non-printable character with the hex value '0x90'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0xf9'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0x46'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0xa5'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0xfd'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0x13'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0x29'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53925): Syntax error, unexpected non-printable character with the hex value '0xc1'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53933): Syntax error, unexpected non-printable character with the hex value '0x21'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53933): Syntax error, unexpected non-printable character with the hex value '0x1e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53933): Syntax error, unexpected non-printable character with the hex value '0xc1'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53933): Syntax error, unexpected non-printable character with the hex value '0x41'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53933): Syntax error, unexpected non-printable character with the hex value '0x07'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53946): Syntax error, unexpected non-printable character with the hex value '0x8a'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53946): Syntax error, unexpected non-printable character with the hex value '0x89'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53946): Syntax error, unexpected non-printable character with the hex value '0x8e'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53950): Syntax error, unexpected non-printable character with the hex value '0x87'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53951): Syntax error, unexpected non-printable character with the hex value '0x99'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53969): Syntax error, unexpected non-printable character with the hex value '0xa5'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:53969): Syntax error, unexpected non-printable character with the hex value '0x06'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28580): Syntax error, unexpected non-printable character with the hex value '0x2d'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28535): Syntax error, unexpected non-printable character with the hex value '0x52'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28535): Syntax error, unexpected non-printable character with the hex value '0x4a'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:28495): Syntax error, unexpected non-printable character with the hex value '0x2c'.
+# ** Error: /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): (vopt-13342) This version of the compiler is incompatible with the library file "(null)".
+# ** Error: (vopt-13067) /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84:29093): Syntax error, unexpected non-printable character with the hex value '0x79'.
+# /scratch/msc26h14/AraXL/hardware/deps/ariane/core/serdiv.sv(84): Vopt Compiler exiting
+# Error loading design
+Error loading design
+# End time: 14:32:08 on Oct 12,2026, Elapsed time: 0:00:02
+# Errors: 230, Warnings: 0
+make: *** [Makefile:195: simc] Error 12

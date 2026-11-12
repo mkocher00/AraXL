@@ -8,6 +8,7 @@
 
 module ara_soc import axi_pkg::*; import ara_pkg::*; #(
     parameter  int           unsigned NrCores      = 1,                          // Number of Ariane cores in the system.
+    parameter  int           unsigned NrVecCores   = NrCores,                    // Number of Ara cores in the system.  NrVecCores == NrCores: multicore; NrVecCores == 1 < NrCores: multithreading
     // RVV Parameters
     parameter  int           unsigned NrLanes      = 0,                          // Number of parallel vector lanes.
     parameter  int           unsigned NrClusters   = 0,                          // Number of Ara instances
@@ -31,11 +32,11 @@ module ara_soc import axi_pkg::*; import ara_pkg::*; #(
     // Must be a power of two. Defaults to one bank per core.
     parameter  int           unsigned NrL2Banks    = NrCores,
     // Dependant parameters. DO NOT CHANGE!
-    localparam type                   axi_data_t   = logic [AxiDataWidth-1:0],
-    localparam type                   axi_strb_t   = logic [AxiDataWidth/8-1:0],
-    localparam type                   axi_addr_t   = logic [AxiAddrWidth-1:0],
-    localparam type                   axi_user_t   = logic [AxiUserWidth-1:0],
-    localparam type                   axi_id_t     = logic [AxiIdWidth-1:0],
+    localparam type                   axi_data_t    = logic [AxiDataWidth-1:0],
+    localparam type                   axi_strb_t    = logic [AxiDataWidth/8-1:0],
+    localparam type                   axi_addr_t    = logic [AxiAddrWidth-1:0],
+    localparam type                   axi_user_t    = logic [AxiUserWidth-1:0],
+    localparam type                   axi_id_t      = logic [AxiIdWidth-1:0],
 
     localparam type                   cluster_axi_data_t   = logic [ClusterAxiDataWidth-1:0],
     localparam type                   cluster_axi_strb_t   = logic [ClusterAxiDataWidth/8-1:0],
@@ -115,8 +116,9 @@ module ara_soc import axi_pkg::*; import ara_pkg::*; #(
   localparam int unsigned L2IndexLow     = L2WordOffset + L2BankIdxWidth;
 
   // Interconnect requester ports: one per core, plus the shared atomics path.
-  localparam int unsigned NrL2Req  = NrCores + 1;
-  localparam int unsigned L2AmoReq = NrCores;
+  localparam bit          MultiThread = (NrVecCores < NrCores);
+  localparam int unsigned NrL2Req     = NrCores + 1; 
+  localparam int unsigned L2AmoReq    = NrCores;
 
   // Bank read latency. tc_sram and the interconnect's response pipeline MUST
   // agree: the interconnect steers read data home by replaying the winning
@@ -250,8 +252,7 @@ module ara_soc import axi_pkg::*; import ara_pkg::*; #(
   // axi_to_mem default of 1 would throttle the bank port.
   localparam int unsigned L2BufDepth = 4;
 
-  // Requester side of the L2 interconnect: one port per core, plus the shared
-  // atomics path at index L2AmoReq.
+  // Requester side of the L2 interconnect: one port per core, plus the shared atomics path at index L2AmoReq.
   logic [NrL2Req-1:0]                       l2r_req;
   logic [NrL2Req-1:0]                       l2r_gnt;
   logic [NrL2Req-1:0]                       l2r_we;
@@ -677,9 +678,71 @@ module ara_soc import axi_pkg::*; import ara_pkg::*; #(
   `CVA6_INTF_TYPEDEF_CVA6_TO_ACC(cva6_to_acc_t, accelerator_req_t, acc_mmu_resp_t)
   `CVA6_INTF_TYPEDEF_ACC_TO_CVA6(acc_to_cva6_t, accelerator_resp_t, acc_mmu_req_t)
 
+
+// Create a single instance of ara_multithreading_system if MultiThread is enabled
+if (MultiThread) begin : gen_mt
+  ara_multithreading_system #(
+        .NrHosts            (NrCores              ),
+    .NrLanes            (NrLanes              ),
+    .NrClusters         (NrClusters           ),
+    .FPUSupport         (FPUSupport           ),
+    .FPExtSupport       (FPExtSupport         ),
+    .FixPtSupport       (FixPtSupport         ),
+    .CVA6Cfg            (CVA6AraConfig        ),
+    .exception_t        (exception_t          ),
+    .accelerator_req_t  (accelerator_req_t    ),
+    .accelerator_resp_t (accelerator_resp_t   ),
+    .acc_mmu_req_t      (acc_mmu_req_t        ),
+    .acc_mmu_resp_t     (acc_mmu_resp_t       ),
+    .cva6_to_acc_t      (cva6_to_acc_t        ),
+    .acc_to_cva6_t      (acc_to_cva6_t        ),
+    .AxiAddrWidth       (AxiAddrWidth         ),
+    .AxiIdWidth         (AxiCoreIdWidth       ),
+    .AxiNarrowDataWidth (AxiNarrowDataWidth   ),
+    .AxiWideDataWidth   (AxiDataWidth         ),
+    .ClusterAxiDataWidth(ClusterAxiDataWidth  ),
+    .ara_axi_ar_t       (ara_axi_ar_chan_t    ),
+    .ara_axi_aw_t       (ara_axi_aw_chan_t    ),
+    .ara_axi_b_t        (ara_axi_b_chan_t     ),
+    .ara_axi_r_t        (ara_axi_r_chan_t     ),
+    .ara_axi_w_t        (ara_axi_w_chan_t     ),
+    .ara_axi_req_t      (ara_axi_req_t        ),
+    .ara_axi_resp_t     (ara_axi_resp_t       ),
+    .cluster_axi_ar_t   (ara_cluster_axi_ar_chan_t),
+    .cluster_axi_aw_t   (ara_cluster_axi_aw_chan_t),
+    .cluster_axi_b_t    (ara_cluster_axi_b_chan_t ),
+    .cluster_axi_r_t    (ara_cluster_axi_r_chan_t ),
+    .cluster_axi_w_t    (ara_cluster_axi_w_chan_t ),
+    .cluster_axi_req_t  (ara_cluster_axi_req_t    ),
+    .cluster_axi_resp_t (ara_cluster_axi_resp_t   ),
+    .ariane_axi_ar_t    (ariane_axi_ar_chan_t ),
+    .ariane_axi_aw_t    (ariane_axi_aw_chan_t ),
+    .ariane_axi_b_t     (ariane_axi_b_chan_t  ),
+    .ariane_axi_r_t     (ariane_axi_r_chan_t  ),
+    .ariane_axi_w_t     (ariane_axi_w_chan_t  ),
+    .ariane_axi_req_t   (ariane_axi_req_t     ),
+    .ariane_axi_resp_t  (ariane_axi_resp_t    ),
+    .system_axi_ar_t    (system_ar_chan_t     ),
+    .system_axi_aw_t    (system_aw_chan_t     ),
+    .system_axi_b_t     (system_b_chan_t      ),
+    .system_axi_r_t     (system_r_chan_t      ),
+    .system_axi_w_t     (system_w_chan_t      ),
+    .system_axi_req_t   (system_req_t         ),
+    .system_axi_resp_t  (system_resp_t        )
+  ) i_mt_system (
+    .clk_i           (clk_i              ),
+    .rst_ni          (rst_ni             ),
+    .boot_addr_i     (DRAMBase           ),
+    .host_axi_req_o  (system_axi_req_pre ),
+    .host_axi_resp_i (system_axi_resp_pre)
+  );
+end
+
+
 // Create multiple instance of ara system
 for (genvar hart_id = 0; hart_id < NrCores; hart_id++) begin : gen_ara_system
-`ifndef TARGET_GATESIM
+  if (!MultiThread) begin: gen_cva6_ara
+  `ifndef TARGET_GATESIM
   ara_system #(
     .NrLanes           (NrLanes              ),
     .NrClusters        (NrClusters           ),
@@ -770,6 +833,7 @@ for (genvar hart_id = 0; hart_id < NrCores; hart_id++) begin : gen_ara_system
       .mst_resp_i  (system_axi_resp_pre  [hart_id])
     );
   `endif
+end : gen_cva6_ara   
 
   ////////////////////////////////
   //  Crossbar (L2 and non-L2)  //
@@ -849,6 +913,9 @@ end
 
   if (NrCores == 0 || (NrCores & (NrCores - 1)) != 0)
     $error("[ara_soc] NrCores must be a power of two.");
+
+  if (NrVecCores != NrCores && NrVecCores != 1)
+    $error("[ara_soc] NrVecCores must be NrCores (multicore) or 1 (multithreading).");
 
   if (NrL2Banks == 0 || (NrL2Banks & (NrL2Banks - 1)) != 0)
     $error("[ara_soc] NrL2Banks must be a power of two.");

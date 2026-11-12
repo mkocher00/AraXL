@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "run.py", line 1, in <module>
+    cat > run.py << 'EOF'
+NameError: name 'cat' is not defined

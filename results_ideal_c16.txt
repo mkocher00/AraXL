@@ -1,0 +1,3 @@
+C=16 P=64: NO CYCLE COUNT, see /scratch/msc26h14/AraXL/log_ideal_c16_16_64_64.txt | Error loading design | # End time: 17:23:37 on Oct 12,2026, Elapsed time: 0:00:02 | # Errors: 1, Warnings: 0 | make: *** [Makefile:195: simc] Error 12
+C=16 P=128: NO CYCLE COUNT, see /scratch/msc26h14/AraXL/log_ideal_c16_16_64_128.txt | Error loading design | # End time: 17:23:40 on Oct 12,2026, Elapsed time: 0:00:01 | # Errors: 1, Warnings: 0 | make: *** [Makefile:195: simc] Error 12
+C=16 P=256: NO CYCLE COUNT, see /scratch/msc26h14/AraXL/log_ideal_c16_16_64_256.txt | Error loading design | # End time: 17:23:43 on Oct 12,2026, Elapsed time: 0:00:01 | # Errors: 1, Warnings: 0 | make: *** [Makefile:195: simc] Error 12

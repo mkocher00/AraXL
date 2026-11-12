@@ -240,15 +240,15 @@ module ara_tb;
   end
 
 `ifndef USE_CLUSTER
-  assign ara_w       = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara.i_vlsu.axi_req.w.data;
-  assign ara_w_strb  = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara.i_vlsu.axi_req.w.strb;
-  assign ara_w_valid = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara.i_vlsu.axi_req.w_valid;
-  assign ara_w_ready = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara.i_vlsu.axi_resp.w_ready;
+  assign ara_w       = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara.i_vlsu.axi_req.w.data;
+  assign ara_w_strb  = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara.i_vlsu.axi_req.w.strb;
+  assign ara_w_valid = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara.i_vlsu.axi_req.w_valid;
+  assign ara_w_ready = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara.i_vlsu.axi_resp.w_ready;
 `else
-  assign ara_w       = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara_cluster.axi_req_o.w.data;
-  assign ara_w_strb  = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara_cluster.axi_req_o.w.strb;
-  assign ara_w_valid = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara_cluster.axi_req_o.w_valid;
-  assign ara_w_ready = dut.i_ara_soc.gen_ara_system[0].i_system.i_ara_cluster.axi_resp_i.w_ready;
+  assign ara_w       = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara_cluster.axi_req_o.w.data;
+  assign ara_w_strb  = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara_cluster.axi_req_o.w.strb;
+  assign ara_w_valid = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara_cluster.axi_req_o.w_valid;
+  assign ara_w_ready = dut.i_ara_soc.gen_ara_system[0].gen_cva6_ara.i_system.i_vector.i_ara_cluster.axi_resp_i.w_ready;
 `endif
 
 `ifndef IDEAL_DISPATCHER
@@ -276,7 +276,7 @@ module ara_tb;
       for (genvar gl = 0; gl < NrLanes; gl++) begin : gen_fpu_disp_lane
         always @(posedge clk) begin
           if (exit[0] && !(exit >> 1)) begin
-            $display("core-%0d-cluster-%0d-lane-%0d [fpu-cycles] : %d", core, gc, gl, int'(dut.i_ara_soc.gen_ara_system[core].i_system.i_ara_cluster.p_cluster[gc].i_ara_macro.i_ara.gen_lanes[gl].i_lane.i_vfus.i_vmfpu.fpu_gen.vfpu_cnt_q));
+            $display("core-%0d-cluster-%0d-lane-%0d [fpu-cycles] : %d", core, gc, gl, int'(dut.i_ara_soc.gen_ara_system[core].gen_cva6_ara.i_system.i_vector.i_ara_cluster.p_cluster[gc].i_ara_macro.i_ara.gen_lanes[gl].i_lane.i_vfus.i_vmfpu.fpu_gen.vfpu_cnt_q));
           end
         end
       end : gen_fpu_disp_lane
