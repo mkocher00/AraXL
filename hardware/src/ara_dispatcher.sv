@@ -10,6 +10,7 @@
 
 module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     parameter int unsigned             NrLanes = 0,
+    parameter int unsigned             NrHosts = 2,     
     // Support for floating-point data types
     parameter fpu_support_e            FPUSupport = FPUSupportHalfSingleDouble,
     // External support for vfrec7, vfrsqrt7
@@ -20,6 +21,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     // Ariane configuration
     parameter config_pkg::cva6_cfg_t   CVA6Cfg = cva6_config_pkg::cva6_cfg,
     localparam type                    xlen_t = logic [CVA6Cfg.XLEN-1:0],
+    localparam int unsigned            HartIdW = (NrHosts > 1) ? $clog2(NrHosts) : 1, // must be the same formula in mt_arbiter.sv
     
     parameter type                     accelerator_req_t = logic,
     parameter type                     accelerator_resp_t = logic,
@@ -42,7 +44,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     input  logic                                 ara_req_ready_i,
     input  ara_resp_t                            ara_resp_i,
     input  logic                                 ara_resp_valid_i,
-    input  logic                                 ara_idle_i,
+    input  logic              [NrHosts-1:0]      ara_idle_i,
     // Interface with the lanes
     input  logic              [NrLanes-1:0][4:0] fflags_ex_i,
     input  logic              [NrLanes-1:0]      fflags_ex_valid_i,
@@ -53,7 +55,9 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     output logic                                 core_st_pending_o,
     input  logic                                 load_complete_i,
     input  logic                                 store_complete_i,
-    input  logic                                 store_pending_i
+    input  logic                                 store_pending_i,
+    input  logic              [HartIdW-1:0]      load_complete_hart_i,   // hart of the load the VLSU completes
+    input  logic              [HartIdW-1:0]      store_complete_hart_i   // hart of the store the VLSU completes
   );
 
   import cf_math_pkg::idx_width;
@@ -61,6 +65,19 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
   `include "common_cells/registers.svh"
 
   assign core_st_pending_o = acc_req_i.store_pending;
+
+
+  //////////////////////////////
+  // Multithreading extension //
+  //////////////////////////////
+  logic [HartIdW-1:0] hart;   // hart of the request at the head
+  assign hart = acc_req_i.req_valid ? HartIdW'(acc_req_i.hart) : '0;
+
+  if ($bits(acc_req_i.hart)  != HartIdW) 
+    $error("acc_req.hart width mismatch");
+  if ($bits(acc_resp_o.hart) != HartIdW) 
+    $error("acc_resp.hart width mismatch");
+
 
   ////////////
   //  CSRs  //
@@ -73,12 +90,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
   vxsat_e vxsat_d, vxsat_q;
   vxrm_t  vxrm_d, vxrm_q;
 
-  `FF(vstart_q, vstart_d, '0)
-  `FF(vl_q, vl_d, '0)
-  `FF(vl_cluster_q, vl_cluster_d, '0)
-  `FF(vtype_q, vtype_d, '{vill: 1'b1, default: '0})
-  `FF(vxsat_q, vxsat_d, '0)
-  `FF(vxrm_q, vxrm_d, '0)
+
   // Converts between the internal representation of `vtype_t` and the full XLEN-bit CSR.
   function automatic xlen_t xlen_vtype(vtype_t vtype);
     xlen_vtype = {vtype.vill, {CVA6Cfg.XLEN-9{1'b0}}, vtype.vma, vtype.vta, vtype.vsew,
@@ -174,11 +186,92 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
   riscv::instruction_t instr;
   assign instr = riscv::instruction_t'(acc_req_i.insn);
 
+
+  // ---------------- per-hart architectural state ----------------
+  localparam int unsigned VLENB_H = VLENB / NrHosts;  // each hart's vreg is VLEN/NrHosts
+
+  vlen_t         [NrHosts-1:0]       vstart_h_q,     vstart_h_d;
+  vlen_t         [NrHosts-1:0]       vl_h_q,         vl_h_d;
+  vlen_cluster_t [NrHosts-1:0]       vl_cluster_h_q, vl_cluster_h_d;
+  vtype_t        [NrHosts-1:0]       vtype_h_q,      vtype_h_d;
+  vxrm_t         [NrHosts-1:0]       vxrm_h_q,       vxrm_h_d;
+  vxsat_e        [NrHosts-1:0]       vxsat_h_q,      vxsat_h_d;
+  rvv_pkg::vew_e [NrHosts-1:0][31:0] eew_h_q,        eew_h_d;
+  logic          [NrHosts-1:0][31:0] eew_valid_h_q,  eew_valid_h_d;
+
+
+  // Some bookkeeping must outlive the head request
+  logic [HartIdW-1:0] wait_hart_d, wait_hart_q;  // hart that triggered WAIT_IDLE
+  logic [HartIdW-1:0] sat_hart_d,  sat_hart_q;   // last hart that issued a saturating op
+  logic [HartIdW-1:0] fp_hart_d,   fp_hart_q;    // last hart that issued an FP op
+  `FF(wait_hart_q, wait_hart_d, '0)
+  `FF(sat_hart_q,  sat_hart_d,  '0)
+  `FF(fp_hart_q,   fp_hart_d,   '0)
+
+  always_ff @(posedge clk_i or negedge rst_ni) begin : p_hart_state_ff
+    if (!rst_ni) begin
+      vstart_h_q     <= '0;
+      vl_h_q         <= '0;
+      vl_cluster_h_q <= '0;
+      vxrm_h_q       <= '0;
+      vxsat_h_q      <= '0;
+      eew_valid_h_q  <= '0;
+      for (int h = 0; h < NrHosts; h++) begin
+        vtype_h_q[h] <= '{vill: 1'b1, default: '0};
+        eew_h_q[h]   <= '{default: rvv_pkg::EW8};
+      end
+    end else begin
+      vstart_h_q     <= vstart_h_d;
+      vl_h_q         <= vl_h_d;
+      vl_cluster_h_q <= vl_cluster_h_d;
+      vtype_h_q      <= vtype_h_d;
+      vxrm_h_q       <= vxrm_h_d;
+      vxsat_h_q      <= vxsat_h_d;
+      eew_h_q        <= eew_h_d;
+      eew_valid_h_q  <= eew_valid_h_d;
+    end
+  end
+
+  // The decoder is keep on reading the old names, so that the decoder can stay the same most of the time
+  always_comb begin : p_hart_view
+    vstart_q     = vstart_h_q[hart];
+    vl_q         = vl_h_q[hart];
+    vl_cluster_q = vl_cluster_h_q[hart];
+    vtype_q      = vtype_h_q[hart];
+    vxrm_q       = vxrm_h_q[hart];
+    vxsat_q      = vxsat_h_q[hart];
+    eew_q        = eew_h_q[hart];
+    eew_valid_q  = eew_valid_h_q[hart];
+  end
+
+  // On Write-back, only the head hart's slot can change
+  always_comb begin : p_hart_wb
+    vstart_h_d           = vstart_h_q;     
+    vstart_h_d[hart]     = vstart_d;
+    vl_h_d               = vl_h_q;         
+    vl_h_d[hart]         = vl_d;
+    vl_cluster_h_d       = vl_cluster_h_q; 
+    vl_cluster_h_d[hart] = vl_cluster_d;
+    vtype_h_d            = vtype_h_q;      
+    vtype_h_d[hart]      = vtype_d;
+    vxrm_h_d             = vxrm_h_q;       
+    vxrm_h_d[hart]       = vxrm_d;
+    eew_h_d              = eew_h_q;        
+    eew_h_d[hart]        = eew_d;
+    eew_valid_h_d        = eew_valid_h_q;  
+    eew_valid_h_d[hart]  = eew_valid_d;
+  end
+  // calculates the next value of the per-hart vxsat. Lane events are asynchronous
+  always_comb begin : p_vxsat_wb
+    vxsat_h_d       = vxsat_h_q;
+    vxsat_h_d[hart] = vxsat_d;                  // CSR write by the head hart
+    if (|vxsat_flag_i) 
+      vxsat_h_d[sat_hart_q] = vxsat_e'(1'b1);   // lane event happened
+  end
+
   always_ff @(posedge clk_i or negedge rst_ni) begin
     if (!rst_ni) begin
       state_q             <= NORMAL_OPERATION;
-      eew_q               <= '{default: rvv_pkg::EW8};
-      eew_valid_q         <= '0;
       eew_old_buffer_q    <= rvv_pkg::EW8;
       eew_new_buffer_q    <= rvv_pkg::EW8;
       vs_buffer_q         <= '0;
@@ -188,8 +281,6 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
       rs_mask_request_q   <= 1'b0;
     end else begin
       state_q             <= state_d;
-      eew_q               <= eew_d;
-      eew_valid_q         <= eew_valid_d;
       eew_old_buffer_q    <= eew_old_buffer_d;
       eew_new_buffer_q    <= eew_new_buffer_d;
       vs_buffer_q         <= vs_buffer_d;
@@ -234,17 +325,25 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
   `FF(load_complete_q, load_complete_i || illegal_insn_load, 1'b0)
   `FF(store_complete_q, store_complete_i || illegal_insn_store, 1'b0)
 
+  // Tags for the registered completion pulse. An illegal one belongs 
+  // to the head hart of the cycle they were decoded in.
+  logic [HartIdW-1:0] ld_hart_d, st_hart_d, ld_hart_q, st_hart_q;
+  assign ld_hart_d = illegal_insn_load  ? hart : load_complete_hart_i;
+  assign st_hart_d = illegal_insn_store ? hart : store_complete_hart_i;
+  `FF(ld_hart_q, ld_hart_d, '0)
+  `FF(st_hart_q, st_hart_d, '0)
+
   // NP2 Slide support
   logic is_stride_np2;
-  // logic [idx_width(idx_width(VLENB << 3)):0] sldu_popc;
+  // logic [idx_width(idx_width(VLENB_H << 3)):0] sldu_popc;
   logic [$clog2(NrLanes)-1:0] sldu_popc;
 
   // Is the stride power of two?
   popcount #(
-    // .INPUT_WIDTH (idx_width(VLENB << 3))
+    // .INPUT_WIDTH (idx_width(VLENB_H << 3))
     .INPUT_WIDTH (2)
   ) i_np2_stride (
-    //.data_i    (ara_req_d.stride[idx_width(VLENB << 3)-1:0]),
+    //.data_i    (ara_req_d.stride[idx_width(VLENB_H << 3)-1:0]),
     .data_i      (ara_req_d.stride[$clog2(NrLanes)-1:0]    ),
     .popcount_o(sldu_popc                                  )
   );
@@ -265,6 +364,11 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     vl_cluster_d = vl_cluster_q;
     vtype_d      = vtype_q;
     state_d      = state_q;
+
+    wait_hart_d  = wait_hart_q;
+    sat_hart_d   = sat_hart_q;
+    fp_hart_d    = fp_hart_q;
+
     eew_d        = eew_q;
     eew_valid_d  = eew_valid_q;
     lmul_vs2     = vtype_q.vlmul;
@@ -301,6 +405,10 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     acc_resp_o.req_ready  = 1'b0;
     acc_resp_o.resp_valid = 1'b0;
     acc_resp_o       = '{
+      hart          : hart,       
+      ld_hart       : ld_hart_q,
+      st_hart       : st_hart_q,
+      ff_hart       : fp_hart_q,
       trans_id      : acc_req_i.trans_id,
       load_complete : load_zero_vl | load_complete_q,
       store_complete: store_zero_vl | store_complete_q,
@@ -313,6 +421,8 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     for (int lane = 0; lane < NrLanes; lane++) acc_resp_o.fflags |= fflags_ex_i[lane];
 
     ara_req_d = '{
+      hart         : hart,
+      vxrm         : vxrm_q,  
       vl           : vl_q,
       vl_cluster   : vl_cluster_q,
       vstart       : vstart_q,
@@ -330,8 +440,8 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     is_config            = 1'b0;
     ignore_zero_vl_check = 1'b0;
 
-    // Saturation in any lane will raise vxsat flag
-    vxsat_d |= |vxsat_flag_i;
+    // Saturation in any lane will raise vxsat flag. Events now go through p_vxsat_wb.
+    // vxsat_d |= |vxsat_flag_i; 
     // Fixed-point rounding mode is applied to all lanes
     for (int lane = 0; lane < NrLanes; lane++) alu_vxrm_o[lane] = vxrm_q;
     // Rounding mode is shared between all lanes
@@ -340,7 +450,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
     case (state_q)
       // Is Ara idle?
       WAIT_IDLE: begin
-        if (ara_idle_i) state_d = NORMAL_OPERATION;
+        if (ara_idle_i[wait_hart_q]) state_d = NORMAL_OPERATION;
       end
 
       // Inject a reshuffle instruction
@@ -376,7 +486,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
         // Shuffle the whole reg (vl refers to current vsew)
         ara_req_d.vtype.vsew    = eew_new_buffer_q;
         // Always reshuffle one vreg at a time
-        ara_req_d.vl            = VLENB >> ara_req_d.vtype.vsew;
+        ara_req_d.vl            = VLENB_H >> ara_req_d.vtype.vsew;
         ara_req_d.vl_cluster    = ara_req_d.vl << num_clusters_i;
         // Vl refers to current system vsew but operand requesters
         // will fetch from a register with a different eew
@@ -503,7 +613,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                 // Update the vector length
                 else begin
                   // Maximum vector length. VLMAX = LMUL * VLEN / SEW.
-                  automatic int unsigned vlmax = VLENB >> vtype_d.vsew;
+                  automatic int unsigned vlmax = VLENB_H >> vtype_d.vsew;
                   automatic int unsigned vlmax_cluster = vlmax << num_clusters_i;
                   unique case (vtype_d.vlmul)
                     LMUL_1  : begin 
@@ -589,8 +699,10 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                 // Checking only lmul_q is a trick: we want to stall only if both lmuls have
                 // zero MSB. If lmul_q has zero MSB, it's greater than lmul_d only if also
                 // lmul_d has zero MSB since the slice comparison is intrinsically unsigned
-                if (!vtype_q.vlmul[2] && (vtype_d.vlmul[2:0] < vtype_q.vlmul[2:0]))
+                if (!vtype_q.vlmul[2] && (vtype_d.vlmul[2:0] < vtype_q.vlmul[2:0])) begin
+                  wait_hart_d = hart;
                   state_d = WAIT_IDLE;
+                end
               end
 
               OPIVV: begin: opivv
@@ -1124,7 +1236,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                     // Execute also if vl == 0
                     ignore_zero_vl_check = 1'b1;
                     // The number of elements depends on the EEW we will consider
-                    vlmax = VLENB >> eew_q[insn.varith_type.rs2];
+                    vlmax = VLENB_H >> eew_q[insn.varith_type.rs2];
                     // Rescale the maximum vector length depending on how many
                     // registers we should copy (VLMAX = simm[2:0] * VLEN / SEW).
                     unique case (insn.varith_type.rs1[17:15])
@@ -2733,19 +2845,19 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
               // Maximum vector length. VLMAX = nf * VLEN / EW8.
               unique case (insn.vmem_type.nf)
                 3'd0: begin
-                  ara_req_d.vl = VLENB << 0;
+                  ara_req_d.vl = VLENB_H << 0;
                   ara_req_d.emul = LMUL_1;
                 end
                 3'd1: begin
-                  ara_req_d.vl = VLENB << 1;
+                  ara_req_d.vl = VLENB_H << 1;
                   ara_req_d.emul = LMUL_2;
                 end
                 3'd3:  begin
-                  ara_req_d.vl = VLENB << 2;
+                  ara_req_d.vl = VLENB_H << 2;
                   ara_req_d.emul = LMUL_4;
                 end
                 3'd7:  begin
-                  ara_req_d.vl = VLENB << 3;
+                  ara_req_d.vl = VLENB_H << 3;
                   ara_req_d.emul = LMUL_8;
                 end
                 default: begin
@@ -2919,7 +3031,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
               default:;
             endcase
 
-            // Vector whole register stores are encoded as stores of length VLENB, length
+            // Vector whole register stores are encoded as stores of length VLENB_H, length
             // multiplier LMUL_1 and element width EW8. They overwrite all this decoding.
             if (ara_req_d.op == VSE && insn.vmem_type.rs2 == 5'b01000) begin
               // Execute also if vl == 0
@@ -2929,19 +3041,19 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
               // Maximum vector length. VLMAX = nf * VLEN / EW8.
               unique case (insn.vmem_type.nf)
                 3'd0: begin
-                  ara_req_d.vl = VLENB << 0;
+                  ara_req_d.vl = VLENB_H << 0;
                   ara_req_d.emul = LMUL_1;
                 end
                 3'd1: begin
-                  ara_req_d.vl = VLENB << 1;
+                  ara_req_d.vl = VLENB_H << 1;
                   ara_req_d.emul = LMUL_2;
                 end
                 3'd3:  begin
-                  ara_req_d.vl = VLENB << 2;
+                  ara_req_d.vl = VLENB_H << 2;
                   ara_req_d.emul = LMUL_4;
                 end
                 3'd7:  begin
-                  ara_req_d.vl = VLENB << 3;
+                  ara_req_d.vl = VLENB_H << 3;
                   ara_req_d.emul = LMUL_8;
                 end
                 default: begin
@@ -3018,7 +3130,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                   end
                   riscv::CSR_VLENB: begin
                     // Only reads are allowed
-                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB << num_clusters_i;
+                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB_H << num_clusters_i;
                     else illegal_insn = 1'b1;
                   end
                   riscv::CSR_VXRM: begin
@@ -3051,7 +3163,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                   end
                   riscv::CSR_VLENB: begin
                     // Only reads are allowed
-                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB << num_clusters_i;
+                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB_H << num_clusters_i;
                     else illegal_insn = 1'b1;
                   end
                   riscv::CSR_VXSAT: begin
@@ -3100,7 +3212,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                   end
                   riscv::CSR_VLENB: begin
                     // Only reads are allowed
-                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB << num_clusters_i;
+                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB_H << num_clusters_i;
                     else illegal_insn = 1'b1;
                   end
                   riscv::CSR_VXSAT: begin
@@ -3130,7 +3242,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                   end
                   riscv::CSR_VLENB: begin
                     // Only reads are allowed
-                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB << num_clusters_i;
+                    if (instr.itype.rs1 == '0) acc_resp_o.result = VLENB_H << num_clusters_i;
                     else illegal_insn = 1'b1;
                   end
                   riscv::CSR_VXSAT: begin
@@ -3187,7 +3299,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
         // Optimization: reshuffle vd only if we are not overwriting the whole vector register!
         reshuffle_req_d = {ara_req_d.use_vs1 && (ara_req_d.eew_vs1    != eew_q[ara_req_d.vs1]) && eew_valid_q[ara_req_d.vs1] && in_lane_op,
                            ara_req_d.use_vs2 && (ara_req_d.eew_vs2    != eew_q[ara_req_d.vs2]) && eew_valid_q[ara_req_d.vs2] && in_lane_op,
-                           ara_req_d.use_vd  && (ara_req_d.vtype.vsew != eew_q[ara_req_d.vd ]) && eew_valid_q[ara_req_d.vd ] && vl_q != (VLENB >> ara_req_d.vtype.vsew)};
+                           ara_req_d.use_vd  && (ara_req_d.vtype.vsew != eew_q[ara_req_d.vd ]) && eew_valid_q[ara_req_d.vd ] && vl_q != (VLENB_H >> ara_req_d.vtype.vsew)};
         // TODO: Reshuffling is currently not supported.
         
         // Prepare the information to reshuffle the vector registers during the next cycles
@@ -3288,6 +3400,19 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
 
     acc_resp_o.load_complete  = load_zero_vl  | load_complete_q;
     acc_resp_o.store_complete = store_zero_vl | store_complete_q;
+
+    // A registered pulse (VLSU or illegal) wins. Othr than that this is a zero-vl completion of the head hart
+    acc_resp_o.ld_hart = load_complete_q  ? ld_hart_q : hart;
+    acc_resp_o.st_hart = store_complete_q ? st_hart_q : hart;
+
+
+    // Remember who issued the last flag-producing op
+    if (is_decoding && ara_req_valid_d) begin
+      if (ara_req_d.op inside {[VSADDU:VNCLIPU], VSMUL}) sat_hart_d = hart;
+        if (instr.itype.opcode == riscv::OpcodeVec && (rvv_instruction_t'(instr.instr).varith_type.func3 inside {OPFVV, OPFVF})) 
+          fp_hart_d = hart;
+    end
+
 
     // The token must change at every new instruction
     ara_req_d.token = (ara_req_valid_o && ara_req_ready_i) ? ~ara_req_o.token : ara_req_o.token;

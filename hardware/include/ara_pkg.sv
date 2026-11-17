@@ -30,6 +30,10 @@ package ara_pkg;
   // Maximum number of lanes that Ara can support.
   localparam int unsigned MaxNrLanes = 16;
   
+  // Maximum number of scalar hosts for multithreading.
+  localparam int unsigned MaxNrHosts = 8;
+  typedef logic [$clog2(MaxNrHosts)-1:0] hart_id_t;
+
   // Maximum number of clusters that Ara can support.
   localparam int unsigned MaxNrClusters = 32;
   typedef logic [$clog2(MaxNrClusters)-1:0] id_cluster_t;
@@ -282,6 +286,10 @@ package ara_pkg;
   } vfu_offset_e;
 
   typedef struct packed {
+
+    hart_id_t hart // 
+    
+
     vid_t id; // ID of the vector instruction
 
     ara_op_e op; // Operation

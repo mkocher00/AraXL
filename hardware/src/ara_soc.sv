@@ -682,7 +682,8 @@ module ara_soc import axi_pkg::*; import ara_pkg::*; #(
 // Create a single instance of ara_multithreading_system if MultiThread is enabled
 if (MultiThread) begin : gen_mt
   ara_multithreading_system #(
-        .NrHosts            (NrCores              ),
+    .NrHosts            (NrCores              ),
+    .NrVecCores         (NrVecCores           ),
     .NrLanes            (NrLanes              ),
     .NrClusters         (NrClusters           ),
     .FPUSupport         (FPUSupport           ),

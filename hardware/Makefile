@@ -125,13 +125,7 @@ ifneq ($(nr_cores), 0)
 	bender_defs += --define NR_CORES=$(nr_cores)
 endif
 
-# Multi-threading configuration
-multithreading ?= 0 
-ifeq ($(multithreading), 1)
-	nr_vec_cores ?= 1
-else
-	nr_vec_cores ?= $(nr_cores)
-endif
+
 bender_defs += --define NR_VEC_CORES=$(nr_vec_cores)
 
 # Number of word-interleaved L2 banks (ara_soc's NrL2Banks). Must be a power of

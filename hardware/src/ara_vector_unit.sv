@@ -5,6 +5,7 @@
 
 module ara_vector_unit import axi_pkg::*; import ara_pkg::*; #(
     parameter int unsigned NrHosts      = 2,
+    parameter int unsigned NrVecCores = 1,
     parameter int unsigned NrLanes      = 0,
     parameter int unsigned NrClusters   = 0,
     parameter fpu_support_e   FPUSupport   = FPUSupportHalfSingleDouble,
@@ -67,8 +68,12 @@ module ara_vector_unit import axi_pkg::*; import ara_pkg::*; #(
 
 `ifndef USE_CLUSTER
 
+  if (NrHosts > 1 && NrVecCores == 1)
+    $error("[ara_vector_unit] Multithreading (NrHosts > 1) needs ara_cluster. Define USE_CLUSTER, or use NrHosts = 1 with plain Ara.");
+
   ara #(
     .NrLanes            (NrLanes            ),
+    .NrHosts            (NrHosts            ),
     .FPUSupport         (FPUSupport         ),
     .FPExtSupport       (FPExtSupport       ),
     .FixPtSupport       (FixPtSupport       ),
@@ -95,7 +100,6 @@ module ara_vector_unit import axi_pkg::*; import ara_pkg::*; #(
     .scan_data_o        (/* Unused */       ),
     .cluster_id_i       (id_cluster_t'(0)   ),
     .num_clusters_i     (num_cluster_t'(0)  ),
-    // .hart_id_i       (req_hart_i         ), // TODO: add this port to ara / dispatcher
     .acc_req_i          (acc_req_i          ),
     .acc_resp_o         (acc_resp_o         ),
     .axi_req_o          (axi_req_o          ),
@@ -107,6 +111,7 @@ module ara_vector_unit import axi_pkg::*; import ara_pkg::*; #(
   ara_cluster #(
     .NrLanes            (NrLanes             ),
     .NrClusters         (NrClusters          ),
+    .NrHosts            (NrHosts             ),
     .FPUSupport         (FPUSupport          ),
     .FPExtSupport       (FPExtSupport        ),
     .FixPtSupport       (FixPtSupport        ),
@@ -139,7 +144,6 @@ module ara_vector_unit import axi_pkg::*; import ara_pkg::*; #(
     .scan_enable_i      (scan_enable_i       ),
     .scan_data_i        (1'b0                ),
     .scan_data_o        (/* Unused */        ),
-    // .hart_id_i       (req_hart_i          ), // TODO: add this port to ara_cluster / dispatcher
     .acc_req_i          (acc_req_i           ),
     .acc_resp_o         (acc_resp_o          ),
     .axi_req_o          (axi_req_o           ),

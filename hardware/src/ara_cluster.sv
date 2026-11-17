@@ -10,6 +10,7 @@
 module ara_cluster import ara_pkg::*; import rvv_pkg::*;  #(
     // RVV Parameters
     parameter  int           unsigned NrLanes      = 0,   // Number of parallel vector lanes per Ara instance
+    parameter  int           unsigned NrHosts      = 2,   // Number of scalar cores for multithreading.
     parameter  int           unsigned NrClusters   = 0,   // Number of Ara instances
 
     // Support for floating-point data types
@@ -187,6 +188,7 @@ module ara_cluster import ara_pkg::*; import rvv_pkg::*;  #(
   for (genvar cluster=0; cluster < NrClusters; cluster++) begin : p_cluster
       ara_macro #(
         .NrLanes           (NrLanes             ),
+        .NrHosts           (NrHosts             ),
         .FPUSupport        (FPUSupport          ),
         .FPExtSupport      (FPExtSupport        ),
         .FixPtSupport      (FixPtSupport        ),

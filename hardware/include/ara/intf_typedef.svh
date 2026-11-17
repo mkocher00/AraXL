@@ -16,6 +16,7 @@
     logic [CVA6Cfg.XLEN-1:0]          rs2;                                 \
     roundmode_e                       frm;                                 \
     logic [CVA6Cfg.TRANS_ID_BITS-1:0] trans_id;                            \
+    logic [HartIdW-1:0]               hart;                                \
     logic                             store_pending;                       \
     logic                             acc_cons_en;                         \
     logic                             inval_ready;                         \
@@ -27,6 +28,10 @@
     logic                              resp_valid;                           \
     logic [CVA6Cfg.XLEN-1:0]           result;                               \
     logic [CVA6Cfg.TRANS_ID_BITS-1:0]  trans_id;                             \
+    logic [HartIdW-1:0]                hart;                                 \
+    logic [HartIdW-1:0]                ld_hart;                              \
+    logic [HartIdW-1:0]                st_hart;                              \
+    logic [HartIdW-1:0]                ff_hart;                              \
     exception_t                        exception;                            \
     logic                              store_pending;                        \
     logic                              store_complete;                       \
@@ -43,6 +48,7 @@
     logic                    acc_mmu_req;                 \
     logic [CVA6Cfg.VLEN-1:0] acc_mmu_vaddr;               \
     logic                    acc_mmu_is_store;            \
+    logic [HartIdW-1:0]      mmu_hart;                    \
   } acc_mmu_req_t;
 
 `define CVA6_INTF_TYPEDEF_MMU_RESP(acc_mmu_resp_t, CVA6Cfg, exception_t) \

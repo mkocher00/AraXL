@@ -150,6 +150,7 @@ module ara_system import axi_pkg::*; import ara_pkg::*; #(
   // One vector unit for one host: NrHosts = 1, so no thread tag is needed.
   ara_vector_unit #(
     .NrHosts            (1                  ),
+    .NrVecCores         (1                  ),
     .NrLanes            (NrLanes            ),
     .NrClusters         (NrClusters         ),
     .FPUSupport         (FPUSupport         ),

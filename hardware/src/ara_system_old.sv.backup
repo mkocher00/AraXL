@@ -79,6 +79,7 @@ module ara_system import axi_pkg::*; import ara_pkg::*; #(
   `include "axi/assign.svh"
   `include "axi/typedef.svh"
 
+
   ///////////
   //  AXI  //
   ///////////

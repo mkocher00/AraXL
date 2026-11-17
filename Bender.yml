@@ -70,6 +70,7 @@ sources:
     - hardware/src/ara.sv
     # Level 6
     - hardware/src/ara_macro.sv
+    - hardware/src/mt_arbiter.sv
     # Level 7
     - hardware/src/ara_cluster.sv
     - hardware/src/axi_inval_filter.sv
